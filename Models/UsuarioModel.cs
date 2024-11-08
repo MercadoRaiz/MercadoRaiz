@@ -1,0 +1,6 @@
+
+namespace MercadoRaiz.Models
+{
+
+    
+}

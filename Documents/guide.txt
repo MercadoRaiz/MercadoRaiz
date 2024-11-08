@@ -1,0 +1,20 @@
+Adicionar o pacote do SQL Server ao seu projeto:
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
+
+dotnet add package Microsoft.Extensions.Configuration
+
+Instalar a ferramenta dotnet-ef globalmente:
+dotnet tool install --global dotnet-ef
+
+Adicionar o pacote do EF Core ao seu projeto:
+dotnet add package Microsoft.EntityFrameworkCore
+
+Adicionar o pacote de design do EF Core (necessário para comandos de migração):
+dotnet add package Microsoft.EntityFrameworkCore.Design
+
+Criar uma migração inicial:
+dotnet ef migrations add Migration1
+
+Atualizar o banco de dados com a migração:
+dotnet ef database update

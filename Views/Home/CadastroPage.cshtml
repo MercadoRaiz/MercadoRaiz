@@ -1,6 +1,17 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "CadastroPage";
 }
-<h1>@ViewData["Title"]</h1>
+<h1>TELA CADASTRO</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<input type="text" placeholder="Nome Completo">
+<input type="text" placeholder="CPF">
+<input type="text" placeholder="E-mail">
+<input type="text" placeholder="Senha">
+
+<select>
+            <option value="Cliente">Cliente</option>
+            <option value="Produtor">Produtor</option>
+        </select>
+
+
+        <a asp-controller="Home" asp-action="Index">Acesso Tela Login</a>

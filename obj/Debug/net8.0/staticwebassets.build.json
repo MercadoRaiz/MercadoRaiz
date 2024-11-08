@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JFZBWGHA3jhQ0FiPQdmR1jk4U7hvGhUcktZiBPcC3i8=",
+  "Hash": "F/ac8q0BtmOvfycelTfnCnS2v7tHQUe3ZTRxTCEDb5Y=",
   "Source": "MercadoRaiz",
   "BasePath": "_content/MercadoRaiz",
   "Mode": "Default",
@@ -93,12 +93,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\js\\backend.js",
       "SourceId": "MercadoRaiz",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\",
       "BasePath": "_content/MercadoRaiz",
-      "RelativePath": "js/site.js",
+      "RelativePath": "js/backend.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -109,7 +109,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
+      "OriginalItemSpec": "wwwroot\\js\\backend.js"
+    },
+    {
+      "Identity": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\js\\frontend.js",
+      "SourceId": "MercadoRaiz",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\",
+      "BasePath": "_content/MercadoRaiz",
+      "RelativePath": "js/frontend.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\frontend.js"
     },
     {
       "Identity": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",

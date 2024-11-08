@@ -13,8 +13,12 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\js\\backend.js",
+      "PackagePath": "staticwebassets\\js\\backend.js"
+    },
+    {
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\js\\frontend.js",
+      "PackagePath": "staticwebassets\\js\\frontend.js"
     },
     {
       "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\LICENSE",
