@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MercadoRaiz.Migrations
 {
     [DbContext(typeof(BancoContext))]
-    [Migration("20241109030140_Migration_Cricao_Database")]
-    partial class Migration_Cricao_Database
+    [Migration("20241109051439_CriandoTodasTabelas")]
+    partial class CriandoTodasTabelas
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -112,11 +112,15 @@ namespace MercadoRaiz.Migrations
 
             modelBuilder.Entity("MercadoRaiz.Models.UsuarioModel", b =>
                 {
-                    b.Property<int>("CPF")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("CPF"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CPF")
+                        .IsRequired()
+                        .HasColumnType("VARCHAR(11)");
 
                     b.Property<string>("Celular")
                         .IsRequired()
@@ -134,7 +138,7 @@ namespace MercadoRaiz.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("CPF");
+                    b.HasKey("Id");
 
                     b.ToTable("Usuario", (string)null);
                 });

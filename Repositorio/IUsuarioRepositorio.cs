@@ -6,7 +6,8 @@ namespace MercadoRaiz.Repositorio
     public interface IUsuarioRepositorio
     {
 
-        UsuarioModel Cadastrar(UsuarioModel Usuario);
+        UsuarioModel CadastrarUsuario(UsuarioModel usuario);
+        bool LoginUsuario (string CPFDigitado, string senhaDigitada);
 
 
     }
