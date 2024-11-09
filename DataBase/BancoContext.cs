@@ -17,7 +17,11 @@ namespace MercadoRaiz.Configuration
     {
     }
 
-        public DbSet<UsuarioModel> Produtos { get; set; } 
+        public DbSet<UsuarioModel> Usuario { get; set; } 
+        public DbSet<PropriedadeModel> Propriedade { get; set; } 
+        public DbSet<PedidoModel> Pedido { get; set; } 
+         public DbSet<ItemPedidoModel> ItemPedido { get; set; } 
+        public DbSet<ProdutoModel> Produto { get; set; } 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) 
         {

@@ -5,17 +5,18 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 namespace MercadoRaiz.Configuration
 {
 
-    public class ProdutoConfiguration : IEntityTypeConfiguration<UsuarioModel>
+    public class UsuarioConfiguration : IEntityTypeConfiguration<UsuarioModel>
     {
         public void Configure(EntityTypeBuilder<UsuarioModel> builder)
         {
-                        // builder.ToTable("Produtos");
-                        // builder.HasKey(p => p.Id);
-                        // builder.Property(p => p.CodigoBarras).HasColumnType("VARCHAR(25)").IsRequired();
-                        // builder.Property(p => p.Nome).HasColumnType("VARCHAR(25)").IsRequired();
-                        // builder.Property(p => p.Valor).IsRequired();
-                        // builder.Property(p => p.MedidaProduto).HasConversion<string>(); //O Tipo produto é informada como uma String
-                        // builder.Property(p => p.Descricao).HasColumnType("VARCHAR(150)").IsRequired(false);
+                        builder.ToTable("Usuario");
+                        builder.HasKey(p => p.CPF);
+                        builder.Property(p => p.Senha).HasColumnType("VARCHAR(25)").IsRequired();
+                        builder.Property(p => p.Nome).HasColumnType("VARCHAR(30)").IsRequired();
+                        builder.Property(p => p.Celular).IsRequired();
+                        builder.Property(p => p.TipoUsuario).HasConversion<string>(); //O Tipo produto é informada como uma String
+                        
         }
     }
 }
+

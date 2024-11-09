@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Git Hub Repositorios\\MercadoRaiz\\MercadoRaiz.csproj": {}
+    "C:\\Users\\marco\\OneDrive\\Documentos\\GitHub\\MercadoRaiz\\MercadoRaiz.csproj": {}
   },
   "projects": {
-    "D:\\Git Hub Repositorios\\MercadoRaiz\\MercadoRaiz.csproj": {
+    "C:\\Users\\marco\\OneDrive\\Documentos\\GitHub\\MercadoRaiz\\MercadoRaiz.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Git Hub Repositorios\\MercadoRaiz\\MercadoRaiz.csproj",
+        "projectUniqueName": "C:\\Users\\marco\\OneDrive\\Documentos\\GitHub\\MercadoRaiz\\MercadoRaiz.csproj",
         "projectName": "MercadoRaiz",
-        "projectPath": "D:\\Git Hub Repositorios\\MercadoRaiz\\MercadoRaiz.csproj",
-        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
-        "outputPath": "D:\\Git Hub Repositorios\\MercadoRaiz\\obj\\",
+        "projectPath": "C:\\Users\\marco\\OneDrive\\Documentos\\GitHub\\MercadoRaiz\\MercadoRaiz.csproj",
+        "packagesPath": "C:\\Users\\marco\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marco\\OneDrive\\Documentos\\GitHub\\MercadoRaiz\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\marco\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,6 +43,16 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -77,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
