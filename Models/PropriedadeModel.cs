@@ -6,7 +6,7 @@ namespace MercadoRaiz.Models
         public int IdPropriedade {get; set; }
         public string Cidade {get; set; }
         public ESiglaEstado SiglaEstado {get; set; }
-        public int CPFProdutor {get; set; }
+        public string CPFProdutor {get; set; }
     }
 
 

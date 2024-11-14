@@ -1,0 +1,16 @@
+﻿@model UsuarioModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+@{
+    string returnUrl = Context.Request.Query["ReturnUrl"];
+}
+
+<form asp-controller="Login" asp-action="ChecarLogin" method="post">
+    <input type="hidden" name="returnUrl" value="@returnUrl" />
+    <input type="text" name="cpfdigitado" placeholder="CPF" required />
+    <input type="text" name="senhadigitada" placeholder="Senha" required />
+    <button type="submit">Login</button>
+</form>

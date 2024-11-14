@@ -10,7 +10,8 @@ namespace MercadoRaiz.Configuration
         public void Configure(EntityTypeBuilder<UsuarioModel> builder)
         {
                         builder.ToTable("Usuario");
-                        builder.HasKey(p => p.CPF);
+                        builder.HasKey(p => p.Id);
+                        builder.Property(p => p.CPF).HasColumnType("VARCHAR(11)").IsRequired();
                         builder.Property(p => p.Senha).HasColumnType("VARCHAR(25)").IsRequired();
                         builder.Property(p => p.Nome).HasColumnType("VARCHAR(30)").IsRequired();
                         builder.Property(p => p.Celular).IsRequired();

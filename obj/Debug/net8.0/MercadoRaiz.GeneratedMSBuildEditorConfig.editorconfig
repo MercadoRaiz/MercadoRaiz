@@ -9,39 +9,47 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MercadoRaiz
 build_property.RootNamespace = MercadoRaiz
-build_property.ProjectDir = C:\Users\marco\OneDrive\Documentos\GitHub\MercadoRaiz\
+build_property.ProjectDir = D:\Git Hub Repositorios\MercadoRaiz\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\marco\OneDrive\Documentos\GitHub\MercadoRaiz
+build_property.MSBuildProjectDirectory = D:\Git Hub Repositorios\MercadoRaiz
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/marco/OneDrive/Documentos/GitHub/MercadoRaiz/Views/Home/CadastroPage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYWRhc3Ryb1BhZ2UuY3NodG1s
+[D:/Git Hub Repositorios/MercadoRaiz/Views/Cadastro/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marco/OneDrive/Documentos/GitHub/MercadoRaiz/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[D:/Git Hub Repositorios/MercadoRaiz/Views/InterfaceCliente/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJmYWNlQ2xpZW50ZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marco/OneDrive/Documentos/GitHub/MercadoRaiz/Views/Shared/Error.cshtml]
+[D:/Git Hub Repositorios/MercadoRaiz/Views/InterfaceProdutor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJmYWNlUHJvZHV0b3JcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Git Hub Repositorios/MercadoRaiz/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Git Hub Repositorios/MercadoRaiz/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marco/OneDrive/Documentos/GitHub/MercadoRaiz/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Git Hub Repositorios/MercadoRaiz/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marco/OneDrive/Documentos/GitHub/MercadoRaiz/Views/_ViewImports.cshtml]
+[D:/Git Hub Repositorios/MercadoRaiz/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marco/OneDrive/Documentos/GitHub/MercadoRaiz/Views/_ViewStart.cshtml]
+[D:/Git Hub Repositorios/MercadoRaiz/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marco/OneDrive/Documentos/GitHub/MercadoRaiz/Views/Shared/_Layout.cshtml]
+[D:/Git Hub Repositorios/MercadoRaiz/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-phin133k8i

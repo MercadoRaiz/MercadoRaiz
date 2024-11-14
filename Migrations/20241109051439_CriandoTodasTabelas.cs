@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MercadoRaiz.Migrations
 {
     /// <inheritdoc />
-    public partial class Migration_Cricao_Database : Migration
+    public partial class CriandoTodasTabelas : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -74,8 +74,9 @@ namespace MercadoRaiz.Migrations
                 name: "Usuario",
                 columns: table => new
                 {
-                    CPF = table.Column<int>(type: "integer", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    CPF = table.Column<string>(type: "VARCHAR(11)", nullable: false),
                     Nome = table.Column<string>(type: "VARCHAR(30)", nullable: false),
                     Celular = table.Column<string>(type: "text", nullable: false),
                     Senha = table.Column<string>(type: "VARCHAR(25)", nullable: false),
@@ -83,7 +84,7 @@ namespace MercadoRaiz.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Usuario", x => x.CPF);
+                    table.PrimaryKey("PK_Usuario", x => x.Id);
                 });
         }
 

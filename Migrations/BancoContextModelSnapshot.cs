@@ -109,11 +109,15 @@ namespace MercadoRaiz.Migrations
 
             modelBuilder.Entity("MercadoRaiz.Models.UsuarioModel", b =>
                 {
-                    b.Property<int>("CPF")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("CPF"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CPF")
+                        .IsRequired()
+                        .HasColumnType("VARCHAR(11)");
 
                     b.Property<string>("Celular")
                         .IsRequired()
@@ -131,7 +135,7 @@ namespace MercadoRaiz.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("CPF");
+                    b.HasKey("Id");
 
                     b.ToTable("Usuario", (string)null);
                 });

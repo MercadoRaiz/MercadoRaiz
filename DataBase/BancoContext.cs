@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MercadoRaiz.Configuration
 {
-
+    
 
  public class BancoContext : DbContext     
     {

@@ -1,0 +1,26 @@
+﻿@model UsuarioModel
+@{
+    ViewData["Title"] = "CadastroPage";
+}
+<h1>TELA CADASTRO</h1>
+
+
+<form asp-controller="Cadastro" asp-action="CadastrarUsuario" method="post">
+<input type="text" asp-for="Nome" placeholder="Nome Completo">
+<input type="text" asp-for="CPF" placeholder="CPF">
+<input type="text" asp-for="Celular" placeholder="Celular">
+<input type="text" asp-for="Senha" placeholder="Senha">
+
+<select asp-for="TipoUsuario">
+    <option value="Cliente">Cliente</option>
+    <option value="Produtor">Produtor</option>
+</select>
+
+
+<button type="submit">CADASTRAR</button>
+
+</form>
+
+
+        <a asp-controller="Login" asp-action="Index">Acesso Tela Login</a>
+
