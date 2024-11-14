@@ -17,8 +17,27 @@ options.UseNpgsql(Configuration.GetConnectionString("DataBase")));
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();//Toda vez que minha IUsuarioRepositorio for chamada quero que ele use todos atributos e metodos da Usuario
 
 
+builder.Services.AddAuthentication("CookieAuth") .AddCookie("CookieAuth", config => { config.Cookie.Name = "UserLoginCookie"; config.LoginPath = "/Login"; });
+
+builder.Services.AddAuthorization(options => { 
+options.AddPolicy("Cliente", policy => policy.RequireRole("Cliente")); 
+options.AddPolicy("Produtor", policy => policy.RequireRole("Produtor")); }); 
+
+builder.Services.AddSession(options => { 
+    options.IdleTimeout = TimeSpan.FromHours(1); 
+    options.Cookie.HttpOnly = true; 
+    options.Cookie.IsEssential = true; });
 
 
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("Cliente", policy => //cria uma politica de autorização para string Cliente
+        policy.RequireRole("Cliente")); // o usuario que conter a Role Cliente terá acesso a pagina que contem a autorização
+
+    options.AddPolicy("Produtor", policy =>
+        policy.RequireRole("Produtor"));
+});
 
 
 
@@ -38,12 +57,15 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+
 app.UseRouting();
 
-app.UseAuthorization();
+app.UseAuthentication(); 
+app.UseAuthorization(); 
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Login}/{action=Index}/{id?}");
 
 app.Run();

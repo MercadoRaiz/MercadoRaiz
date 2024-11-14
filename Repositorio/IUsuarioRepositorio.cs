@@ -7,7 +7,10 @@ namespace MercadoRaiz.Repositorio
     {
 
         UsuarioModel CadastrarUsuario(UsuarioModel usuario);
-        bool LoginUsuario (string CPFDigitado, string senhaDigitada);
+        
+        bool LoginUsuario (string cpf, string senha);
+
+        string TipoUsuario(string cpf);
 
 
     }

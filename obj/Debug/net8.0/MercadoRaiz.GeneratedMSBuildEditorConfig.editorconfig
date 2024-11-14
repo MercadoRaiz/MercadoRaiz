@@ -18,20 +18,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Git Hub Repositorios\MercadoRaiz
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Git Hub Repositorios/MercadoRaiz/Views/Home/CadastroPage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYWRhc3Ryb1BhZ2UuY3NodG1s
+[D:/Git Hub Repositorios/MercadoRaiz/Views/Cadastro/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git Hub Repositorios/MercadoRaiz/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[D:/Git Hub Repositorios/MercadoRaiz/Views/InterfaceCliente/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJmYWNlQ2xpZW50ZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git Hub Repositorios/MercadoRaiz/Views/Interfaces/ClientePage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJmYWNlc1xDbGllbnRlUGFnZS5jc2h0bWw=
+[D:/Git Hub Repositorios/MercadoRaiz/Views/InterfaceProdutor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJmYWNlUHJvZHV0b3JcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Git Hub Repositorios/MercadoRaiz/Views/Interfaces/ProdutorPage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJmYWNlc1xQcm9kdXRvclBhZ2UuY3NodG1s
+[D:/Git Hub Repositorios/MercadoRaiz/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Git Hub Repositorios/MercadoRaiz/Views/Shared/Error.cshtml]

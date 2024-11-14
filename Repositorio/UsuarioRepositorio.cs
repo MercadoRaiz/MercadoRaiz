@@ -24,39 +24,34 @@ namespace MercadoRaiz.Repositorio
             return usuario;
         }
 
-
-
-
-
-
-            
-
-     public bool LoginUsuario(string CPFDigitado, string senhaDigitada)
-    {
-        // 1. Verificar se o usuário existe no banco
-        var usuario = _bancoContext.Usuario
-                              .FirstOrDefault(u => u.CPF == CPFDigitado);
-
-        if (usuario == null)
+        public bool LoginUsuario(string cpf, string senha)
         {
-            // Se o usuário não existe, retorna false
+            var usuario = _bancoContext.Usuario
+                        .Where(u => u.CPF == cpf)
+                        .Select(u => new { u.CPF, u.Senha }) 
+                        .FirstOrDefault();
+            if (usuario != null) 
+            {
+             return usuario.CPF == cpf && usuario.Senha == senha;
+            } // Retornar falso se o usuário não for encontrado return false;
+
             return false;
         }
 
-        // 2. Comparar a senha fornecida com a senha armazenada no banco (sem hash)
-        if (usuario.Senha != senhaDigitada)
+        public string TipoUsuario(string cpf)
         {
-            // Se a senha não for válida, retorna false
-            return false;
-        }
+            var usuario = _bancoContext.Usuario
+                        .Where(u => u.CPF == cpf)
+                        .Select(u => new { u.TipoUsuario})
+                        .FirstOrDefault();
 
-        // 3. Retorna true se o login for bem-sucedido
-        return true;
+
+            return usuario.TipoUsuario.ToString();
+        }
     }
-}
+
 }
 
-            
-        
 
-        
+
+

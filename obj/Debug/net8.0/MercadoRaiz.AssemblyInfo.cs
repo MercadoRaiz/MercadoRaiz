@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MercadoRaiz")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71b1685f6d4d74ae915fcf0290c2ee2f664c95a3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6ab0774e8502b7b52b5c075d8d96cdaae577b62")]
 [assembly: System.Reflection.AssemblyProductAttribute("MercadoRaiz")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MercadoRaiz")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
