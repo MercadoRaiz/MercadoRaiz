@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using MercadoRaiz.Configuration;
 using MercadoRaiz.Models;
 
@@ -37,22 +38,21 @@ namespace MercadoRaiz.Repositorio
 
 
 
-        public ProdutoModel ListarProduto(string cpf)
+
+   public ProdutoModel ListarProduto(int id)
         {
 
-            return _bancoContext.Produto.FirstOrDefault(x => x.CPF_Produtor == cpf);
+            return _bancoContext.Produto.FirstOrDefault(x => x.Id_Produto == id);
         }
 
-
-
-        public ProdutoModel Atualizar(ProdutoModel produto)
+    public ProdutoModel Atualizar(ProdutoModel produto)
         {
-            ProdutoModel produtoDB = ListarProduto(produto.CPF_Produtor);
+            ProdutoModel produtoDB = ListarProduto(produto.Id_Produto);
 
             if (produtoDB == null) throw new Exception("Houve um erro na atualização do produto!!");
-            produtoDB.Nome = produto.Nome;
-            produtoDB.Estoque = produto.Estoque;
+            
             produtoDB.Valor = produto.Valor;
+            produtoDB.Estoque = produto.Estoque;
             
 
             _bancoContext.Produto.Update(produtoDB);
@@ -64,9 +64,11 @@ namespace MercadoRaiz.Repositorio
 
         }
 
-        public bool Remover(string cpf)
+    
+
+        public bool Remover(int id)
         {
-            ProdutoModel produtoDB = ListarProduto(cpf);
+            ProdutoModel produtoDB = ListarProduto(id);
 
             if (produtoDB == null) throw new Exception("Houve um erro na Remoção do produto!!");
 
@@ -80,8 +82,7 @@ namespace MercadoRaiz.Repositorio
 
         }
 
-        
 
-      
+
     }
     }

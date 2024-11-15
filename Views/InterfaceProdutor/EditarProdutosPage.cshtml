@@ -1,0 +1,42 @@
+@model ProdutoModel
+@{
+    ViewData["Title"] = "EditarProdutosPage";
+}
+
+
+<h1> Editar Produto</h1>
+
+<form asp-controller="InterfaceProdutor" asp-action="AtualizarProduto" method="post">
+
+
+<input type="hidden" asp-for="Id_Produto">
+
+
+ <div>
+    <input type="text" asp-for="Nome" class="form-control" placeholder="Nome" readonly>
+    <label for="floatingInput">Nome</label>
+    <br>
+</div>
+
+    <div class="form-floating mb-3">
+        <input type="text" asp-for="Estoque" class="form-control" placeholder="Estoque">
+        <label for="floatingInput">Estoque</label>
+    </div>
+
+     <div class="form-floating mb-3">
+        <input type="decimal" asp-for="Valor" class="form-control" placeholder="Valor do Produto">
+        <label for="floatingInput">Valor do Produto</label>
+    </div>
+    
+    
+
+    <button type="submit" class="btn btn-primary w-100" type="button"><strong>Editar</strong></button>
+    <br>
+    <br>
+   
+</form>
+
+ <a class="btn btn-secondary w-100" asp-controller="InterfaceProdutor" asp-action="Index" role="button">Voltar</a>
+
+
+ 

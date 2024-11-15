@@ -29,11 +29,11 @@ public class InterfaceProdutorController : Controller
     }
 
 
-     public IActionResult GerenciarProdutosPage(string cpfProdutor)
+     public IActionResult GerenciarProdutosPage(ProdutoModel produto)
     {
 
-
-        List<ProdutoModel> produtos = _produtoRepositorio.BuscarProdutos(cpfProdutor);
+        produto.CPF_Produtor = GetCPF(produto);
+        List<ProdutoModel> produtos = _produtoRepositorio.BuscarProdutos(produto.CPF_Produtor);
 
 
         return View(produtos);
@@ -53,19 +53,21 @@ public class InterfaceProdutorController : Controller
     [HttpPost]
     public ActionResult CadastrarProduto(ProdutoModel produto)
     {
-        var cpfProdutor = User.FindFirst(ClaimTypes.Name)?.Value;
-
-        produto.CPF_Produtor = cpfProdutor;
+        
+        produto.CPF_Produtor = GetCPF(produto);
+        
         _produtoRepositorio.Adicionar(produto);
         return RedirectToAction("Index");
     }
 
 
-    public IActionResult EditarProduto(string cpf)
+    public IActionResult EditarProdutosPage(int id)
 {
-    ProdutoModel produto = _produtoRepositorio.ListarProduto(cpf);
+   
+    ProdutoModel produto = _produtoRepositorio.ListarProduto(id);
     return View(produto);
 }
+
 
     [HttpPost]
     public IActionResult AtualizarProduto(ProdutoModel produto)
@@ -73,26 +75,38 @@ public class InterfaceProdutorController : Controller
 
 
         _produtoRepositorio.Atualizar(produto);
-        return RedirectToAction("GerenciarProdutos");
+        return RedirectToAction("GerenciarProdutosPage");
     }
 
 
   
-    public IActionResult RemoverProduto(string cpf)
+    // public IActionResult RemoverProduto(int id)
+    // {
+    //   ProdutoModel produto = _produtoRepositorio.ListarProduto(id);   
+    //     return View(produto);
+    // }
+
+     public IActionResult Remover(int id)
     {
-      ProdutoModel produto = _produtoRepositorio.ListarProduto(cpf);   
-        return View(produto);
+         _produtoRepositorio.Remover(id);
+
+        return RedirectToAction("GerenciarProdutosPage"); //redireciona para index
+
     }
 
-     public IActionResult Remover(string cpf)
-    {
-         _produtoRepositorio.Remover(cpf);
 
-        return RedirectToAction("GerenciarProdutos"); //redireciona para index
+
+
+
+    public string GetCPF(ProdutoModel produto){
+
+    var cpfProdutor = User.FindFirst(ClaimTypes.Name)?.Value;
+    produto.CPF_Produtor = cpfProdutor;
+
+    return produto.CPF_Produtor;
 
     }
 
-
-   
+    
 
 }
