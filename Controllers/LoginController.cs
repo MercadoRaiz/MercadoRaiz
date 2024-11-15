@@ -11,12 +11,15 @@ namespace MercadoRaiz.Controllers;
 public class LoginController : Controller
 {
     private readonly IUsuarioRepositorio _usuarioRepositorio;//fazendo a injeção de dependencia
+    private readonly IProdutoRepositorio _produtoRepositorio;//fazendo a injeção de dependencia
 
-    public LoginController(IUsuarioRepositorio UsuarioRepositorio)
+    public LoginController(IUsuarioRepositorio UsuarioRepositorio, IProdutoRepositorio ProdutoRepositorio)
     {
 
         _usuarioRepositorio = UsuarioRepositorio;
+        _produtoRepositorio = ProdutoRepositorio;
     }
+    
 
     //VISUALIZAÇÃO
     public IActionResult Index()
@@ -65,8 +68,15 @@ public async Task<IActionResult> ChecarLogin(string cpfdigitado, string senhadig
         }
 
         // Redirecionar para as páginas específicas dos usuários
-        if (tipousuario == "Produtor") return RedirectToAction("Index", "InterfaceProdutor");
-        if (tipousuario == "Cliente") return RedirectToAction("Index", "InterfaceCliente");
+        if (tipousuario == "Produtor")
+        {
+            
+            return RedirectToAction("Index", "InterfaceProdutor");
+        }
+        if (tipousuario == "Cliente"){
+
+            
+        } return RedirectToAction("Index", "InterfaceCliente");
     }
 
     ViewBag.ErrorMessage = "CPF ou senha incorretos";
