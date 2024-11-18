@@ -1,0 +1,49 @@
+@model List<ProdutoModel>
+@{
+  ViewData["Title"] = "GerenciarProdutosPage";
+}
+
+<div class = "text-center">
+
+<div class = "d-grid gap-2 d-md-flex justify-content-md-start"> 
+  <a class="btn btn-primary" role = "button" asp-controller="InterfaceProdutor" asp-action="CadastrarPage">Cadastrar Novo Produto</a>
+  </div>
+<br>
+<h1 class="h3"><strong>Listagem de Produtos</strong></h1>
+<br>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Produto</th>
+      <th scope="col">Valor</th>
+      <th scope="col">Estoque</th>
+      <th scope="col">ID</th>
+      <th scope="col">Ações</th>
+
+    </tr>
+  </thead>
+   <tbody>
+    @if(Model != null && Model.Any())
+    {
+      foreach (ProdutoModel produto in Model)
+      {
+        <tr>
+          <th scope = "row">@produto.Nome</th>
+          <td>@produto.Valor</td>
+          <td>@produto.Estoque</td>
+          <td>@produto.Id_Produto</td>>          
+          <td>
+              <div class="btn-group" role="group">
+                <a role="button" class="btn btn-primary" asp-controller="InterfaceProdutor" asp-action="EditarProdutosPage" asp-route-id = "@produto.Id_Produto">Editar</a>
+                <a role="button" class="btn btn-danger" asp-controller="InterfaceProdutor" asp-action="Remover"  asp-route-id = "@produto.Id_Produto" >Remover</a>
+                </div>
+          </td>
+          </tr>
+      }
+    }
+  </tbody> 
+</table>
+</div>
+
+<a class="btn btn-secondary w-100" asp-controller="InterfaceProdutor" asp-action="Index" role="button">Voltar</a>

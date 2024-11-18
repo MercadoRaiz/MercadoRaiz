@@ -1,0 +1,61 @@
+@model ProdutoModel
+
+@{
+    ViewData["Title"] = "CadastrarPage";
+}
+
+
+<h1> Cadastrar Produto</h1>
+
+<form asp-controller="InterfaceProdutor" asp-action="CadastrarProduto" method="post">
+
+
+ <div>
+    <select class="form-select" asp-for="Nome">
+        <option value="Abobrinha">Abobrinha</option>
+        <option value="Acelga">Acelga</option>
+        <option value="Alface">Alface</option>
+        <option value="Amora">Amora</option>
+        <option value="Batata">Batata</option>
+        <option value="Berinjela">Berinjela</option>
+        <option value="Cebolinha">Cebolinha</option>
+        <option value="Cenoura">Cenoura</option>
+        <option value="Coentro">Coentro</option>
+        <option value="Cogumelo">Cogumelo</option>
+        <option value="Couve">Couve</option>
+        <option value="Espinafre">Espinafre</option>
+        <option value="Framboesa">Framboesa</option>
+        <option value="Hortela">Hortelã</option>
+        <option value="Limao">Limão</option>
+        <option value="Manjericao">Manjericão</option>
+        <option value="Morango">Morango</option>
+        <option value="Nabo">Nabo</option>
+        <option value="Pepino">Pepino</option>
+        <option value="Pimentao">Pimentão</option>
+        <option value="Rabanete">Rabanete</option>
+        <option value="Rucula">Rúcula</option>
+        <option value="Salsa">Salsa</option>
+        <option value="Shimeji">Shimeji</option>
+        <option value="Shitake">Shitake</option>
+        <option value="Tomate">Tomate</option>
+    </select>
+    <br>
+</div>
+
+    <div class="form-floating mb-3">
+        <input type="text" asp-for="Estoque" class="form-control" placeholder="Estoque">
+        <label for="floatingInput">Estoque</label>
+    </div>
+
+     <div class="form-floating mb-3">
+        <input type="decimal" asp-for="Valor" class="form-control" placeholder="Valor do Produto">
+        <label for="floatingInput">Valor do Produto</label>
+    </div>
+    
+    
+
+    <button type="submit" class="btn btn-primary w-100" type="button"><strong>Cadastrar</strong></button>
+    <br>
+    <br>
+    <a class="btn btn-secondary w-100" asp-controller="InterfaceProdutor" asp-action="Index" role="button">Voltar</a>
+</form>

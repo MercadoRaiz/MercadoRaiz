@@ -8,5 +8,7 @@ namespace MercadoRaiz.Models
         public DateTime Data { get; set; }
         public decimal Valor_Total { get; set; }
         public string CPF_Cliente { get; set; }
+        public string CPF_Produtor { get; set;}
+        
     }
 }

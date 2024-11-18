@@ -14,6 +14,7 @@ namespace MercadoRaiz.Configuration
                         builder.Property(p => p.Data).IsRequired();
                         builder.Property(p => p.Valor_Total).IsRequired();
                         builder.Property(p => p.CPF_Cliente).IsRequired();
+                        builder.Property(p => p.CPF_Produtor).IsRequired();
                         
         }
     }
