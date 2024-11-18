@@ -1,21 +1,4 @@
-01____________________________________________________________________
-
-Instalar .NET 8.0 https://dotnet.microsoft.com/pt-br/download
-
-02____________________________________________________________________
-
-Extensões VSCODE
-
-.Net Install Tool
-
-C#
-
-C# DEV KIT
-
-03____________________________________________________________________
-
 Adicionar o pacote do SQL Server ao seu projeto:
-
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
 
@@ -29,42 +12,6 @@ dotnet add package Microsoft.EntityFrameworkCore
 
 Adicionar o pacote de design do EF Core (necessário para comandos de migração):
 dotnet add package Microsoft.EntityFrameworkCore.Design
-
-___________________________________________________________________________________________________________________________________________________________________________
-
-
-
-
-
-REGRAS PARA COMMIT _________________________________________________________________________________________
-
-
-BUILD: Alterações que afetam o sistema de construção ou dependências externas (escopos de exemplo: gulp, broccoli, npm),
-ci: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs);
-
-DOCS: referem-se a inclusão ou alteração somente de arquivos de documentação;
-
-FEAT: Tratam adições de novas funcionalidades ou de quaisquer outras novas implantações ao código;
-
-FIX: Essencialmente definem o tratamento de correções de bugs;
-
-PERF: Uma alteração de código que melhora o desempenho;
-
-REFACTOR: Tipo utilizado em quaisquer mudanças que sejam executados no código, porém não alterem a funcionalidade final da tarefa impactada;
-
-STYLE: Alterações referentes a formatações na apresentação do código que não afetam o significado do código, como por exemplo: espaço em branco, formatação, ponto e vírgula ausente etc.);
-
-TESTE: Adicionando testes ausentes ou corrigindo testes existentes nos processos de testes automatizados (TDD);
-
-CHORE: Atualização de tarefas que não ocasionam alteração no código de produção, mas mudanças de ferramentas, mudanças de configuração e bibliotecas que realmente não entram em produção;
-
-ENV: basicamente utilizado na descrição de modificações ou adições em arquivos de configuração em processos e métodos de integração contínua (CI), como parâmetros em arquivos de configuração de containers.
-
-
-
-COMANDOS DATABASE___________________________________________________________________________________
-
-BANCO DE DADOS (NÃO NECESSARIO)
 
 Criar uma migração inicial:
 dotnet ef migrations add Migration1
