@@ -17,6 +17,8 @@ options.UseNpgsql(Configuration.GetConnectionString("DataBase")));
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();//Toda vez que minha IUsuarioRepositorio for chamada quero que ele use todos atributos e metodos da Usuario
 builder.Services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
 
+builder.Services.AddScoped<IMuralVendasRepositorio, MuralVendasRepositorio>();
+
 
 
 
