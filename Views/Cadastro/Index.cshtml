@@ -2,25 +2,35 @@
 @{
     ViewData["Title"] = "IndexCadastro";
 }
-<h1>TELA CADASTRO</h1>
-
-
-<form asp-controller="Cadastro" asp-action="CadastrarUsuario" method="post">
-<input type="text" asp-for="Nome" placeholder="Nome Completo">
-<input type="text" asp-for="CPF" placeholder="CPF">
-<input type="text" asp-for="Celular" placeholder="Celular">
-<input type="text" asp-for="Senha" placeholder="Senha">
-
-<select asp-for="TipoUsuario">
-    <option value="Cliente">Cliente</option>
-    <option value="Produtor">Produtor</option>
-</select>
-
-
-<button type="submit">CADASTRAR</button>
-
-</form>
-
-
-        <a asp-controller="Login" asp-action="Index">Acesso Tela Login</a>
-
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <form asp-controller="Cadastro" asp-action="CadastrarUsuario" method="post" class="cadastro-form p-4 rounded">
+        <h2 class="text-center mb-4">Cadastrar-se</h2>
+        <div class="form-group mb-3">
+            <label for="Nome">Nome Completo</label>
+            <input type="text" asp-for="Nome" id="Nome" class="form-control" placeholder="Nome Completo" required />
+        </div>
+        <div class="form-group mb-3">
+            <label for="CPF">CPF</label>
+            <input type="text" asp-for="CPF" id="CPF" class="form-control" placeholder="CPF" required />
+        </div>
+        <div class="form-group mb-3">
+            <label for="Celular">Celular</label>
+            <input type="text" asp-for="Celular" id="Celular" class="form-control" placeholder="Celular" required />
+        </div>
+        <div class="form-group mb-3">
+            <label for="Senha">Senha</label>
+            <input type="password" asp-for="Senha" id="Senha" class="form-control" placeholder="Senha" required />
+        </div>
+        <div class="form-group mb-3">
+            <label for="TipoUsuario">Tipo de Usuário</label>
+            <select asp-for="TipoUsuario" id="TipoUsuario" class="form-select" required>
+                <option value="Cliente">Cliente</option>
+                <option value="Produtor">Produtor</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Cadastrar-se</button>
+        <p class="text-center mt-3">
+            <a asp-controller="Login" asp-action="Index" class="text-decoration-none text-white">Acesso Tela Login</a>
+        </p>
+    </form>
+</div>
