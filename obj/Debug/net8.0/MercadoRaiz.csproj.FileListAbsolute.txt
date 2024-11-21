@@ -251,3 +251,4 @@ D:\Git Hub Repositorios\MercadoRaiz\obj\Debug\net8.0\refint\MercadoRaiz.dll
 D:\Git Hub Repositorios\MercadoRaiz\obj\Debug\net8.0\MercadoRaiz.pdb
 D:\Git Hub Repositorios\MercadoRaiz\obj\Debug\net8.0\MercadoRaiz.genruntimeconfig.cache
 D:\Git Hub Repositorios\MercadoRaiz\obj\Debug\net8.0\ref\MercadoRaiz.dll
+D:\Git Hub Repositorios\MercadoRaiz\bin\Debug\net8.0\DinkToPdf.dll

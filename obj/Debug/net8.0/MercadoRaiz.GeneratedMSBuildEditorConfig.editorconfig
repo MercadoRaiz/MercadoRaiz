@@ -42,8 +42,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJmYWNlUHJvZHV0b3JcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Git Hub Repositorios/MercadoRaiz/Views/InterfaceProdutor/RelatorioVendasPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJmYWNlUHJvZHV0b3JcUmVsYXRvcmlvVmVuZGFzUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Git Hub Repositorios/MercadoRaiz/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Git Hub Repositorios/MercadoRaiz/Views/MuralVendas/CarrinhoPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVyYWxWZW5kYXNcQ2FycmluaG9QYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Git Hub Repositorios/MercadoRaiz/Views/MuralVendas/ComprarPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVyYWxWZW5kYXNcQ29tcHJhclBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Git Hub Repositorios/MercadoRaiz/Views/MuralVendas/Index.cshtml]

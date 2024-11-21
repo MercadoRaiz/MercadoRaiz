@@ -1,6 +1,5 @@
 using MercadoRaiz.Configuration;
 using MercadoRaiz.Models;
-using MercadoRaiz.ViewModels;
 
 namespace MercadoRaiz.Repositorio
 {
@@ -16,30 +15,16 @@ namespace MercadoRaiz.Repositorio
             this._bancoContext = bancoContext;
         }
 
-        
 
-     public List<MuralVendasViewModel> BuscarTodosProdutos()
-{
-    var lista = 
-        from produto in _bancoContext.Produto
-        join propriedade in _bancoContext.Propriedade
-        on produto.CPF_Produtor equals propriedade.CPFProdutor
-        select new MuralVendasViewModel 
+
+        public List<ProdutoModel> BuscarTodosProdutos()
         {
-            Id_Produto = produto.Id_Produto,
-            Nome = produto.Nome.ToString(),
-            Estoque = produto.Estoque,
-            Valor = produto.Valor,
-            Cidade = propriedade.Cidade
-        };
+            var todosProdutos = _bancoContext.Produto.ToList();
 
-    return lista.ToList();
-
-    
-}
-
-
-            
-
+            return todosProdutos;
+        }
     }
+
+
+
 }

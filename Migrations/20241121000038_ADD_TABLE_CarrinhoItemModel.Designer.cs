@@ -3,6 +3,7 @@ using System;
 using MercadoRaiz.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MercadoRaiz.Migrations
 {
     [DbContext(typeof(BancoContext))]
-    partial class BancoContextModelSnapshot : ModelSnapshot
+    [Migration("20241121000038_ADD_TABLE_CarrinhoItemModel")]
+    partial class ADD_TABLE_CarrinhoItemModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -84,13 +87,6 @@ namespace MercadoRaiz.Migrations
 
                     b.Property<DateTime>("Data")
                         .HasColumnType("timestamp with time zone");
-
-                    b.Property<int>("Estoque")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Produto")
-                        .IsRequired()
-                        .HasColumnType("text");
 
                     b.Property<decimal>("Valor_Total")
                         .HasColumnType("numeric");

@@ -18,15 +18,21 @@ namespace MercadoRaiz.Configuration
     }
 
         public DbSet<UsuarioModel> Usuario { get; set; } 
-        public DbSet<PropriedadeModel> Propriedade { get; set; } 
         public DbSet<PedidoModel> Pedido { get; set; } 
          public DbSet<ItemPedidoModel> ItemPedido { get; set; } 
         public DbSet<ProdutoModel> Produto { get; set; } 
+
+        public DbSet<CarrinhoItemModel> CarrinhoItem { get; set; } 
+        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) 
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(BancoContext).Assembly);
 
+
+
         }
+
+        
     }
 }

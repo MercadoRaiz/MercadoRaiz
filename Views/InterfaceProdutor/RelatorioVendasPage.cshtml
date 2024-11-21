@@ -1,0 +1,42 @@
+@model List<PedidoModel>
+@{
+    ViewData["Title"] = "Relatório de Vendas do Produtor";
+}
+
+<div class="text-center">
+    <br>
+    <h1 class="h3"><strong>@ViewData["Title"]</strong></h1>
+    <br>
+    @if (Model != null && Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Data</th>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Valor Total</th>
+                    <th scope="col">CPF Cliente</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var venda in Model)
+                {
+                    <tr>
+                        <td>@venda.Data.ToString("dd/MM/yyyy")</td>
+                        <td>@venda.Produto</td>
+                        <td>@venda.Estoque</td>
+                        <td>R$ @venda.Valor_Total.ToString("F2")</td>
+                        <td>@venda.CPF_Cliente</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        
+    }
+    else
+    {
+        <p>Nenhuma venda encontrada.</p>
+    }
+    <a class="btn btn-primary w-100" asp-controller="InterfaceProdutor" asp-action="Index" role="button">Voltar</a>
+</div>

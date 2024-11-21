@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using MercadoRaiz.Configuration;
 using MercadoRaiz.Repositorio;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -19,6 +20,9 @@ builder.Services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
 
 builder.Services.AddScoped<IMuralVendasRepositorio, MuralVendasRepositorio>();
 
+builder.Services.AddScoped<IPedidoRepositorio, PedidoRepositorio>();
+
+builder.Services.AddScoped<ICarrinhoRepositorio, CarrinhoRepositorio>();
 
 
 

@@ -71,3 +71,11 @@ dotnet ef migrations add Migration1
 
 Atualizar o banco de dados com a migração:
 dotnet ef database update
+
+
+
+PACK PARA EMISSOR DE PDF_____________________________________________________________
+
+dotnet add package DinkToPdf 
+
+dotnet add package DinkToPdf.Contracts

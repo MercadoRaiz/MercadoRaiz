@@ -1,0 +1,55 @@
+@model List<CarrinhoItemModel>
+@{
+    ViewData["Title"] = "Carrinho de Compras";
+    decimal totalGeral = Model?.Sum(item => item?.Produto?.Valor * item?.Quantidade) ?? 0;
+}
+
+<div class="text-center">
+    <br>
+    <h1 class="h3"><strong>@ViewData["Title"]</strong></h1>
+    <br>
+    @if (Model != null && Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Valor Unitário</th>
+                    <th scope="col">Valor Total</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item?.Produto?.Nome</td>
+                        <td>@item?.Quantidade</td>
+                        <td>R$ @item?.Produto?.Valor.ToString("F2")</td>
+                        <td>R$ @(item?.Produto?.Valor * item?.Quantidade)</td>
+                        <td>
+                            <form asp-controller="MuralVendas" asp-action="RemoverDoCarrinho" method="post" class="d-inline">
+                                <input type="hidden" name="id" value="@item?.Id" />
+                                <button type="submit" class="btn btn-danger">Remover</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="text-right">
+            <h4>Total: R$ @totalGeral.ToString("F2")</h4>
+        </div>
+        
+        <form asp-controller="MuralVendas" asp-action="ComprarCarrinho" method="post">
+            <button type="submit" class="btn btn-success w-100">Comprar Todos os Itens</button>
+        </form>
+    }
+    else
+    {
+        <p>Seu carrinho está vazio.</p>
+    }
+    <a class="btn btn-primary w-100" asp-controller="MuralVendas" asp-action="Index" role="button">Continuar Comprando</a>
+</div>

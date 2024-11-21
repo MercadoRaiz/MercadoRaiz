@@ -1,6 +1,5 @@
-using MercadoRaiz.ViewModels;
-using MercadoRaiz.Configuration;
 using MercadoRaiz.Models;
+using MercadoRaiz.Configuration;
 
 namespace MercadoRaiz.Repositorio
 {
@@ -8,7 +7,7 @@ namespace MercadoRaiz.Repositorio
     public interface IMuralVendasRepositorio
     {
     
-    List<MuralVendasViewModel> BuscarTodosProdutos();
+    List<ProdutoModel> BuscarTodosProdutos();
     
 }
 }

@@ -1,14 +1,17 @@
-@using MercadoRaiz.ViewModels;
-@model List<MuralVendasViewModel>
+@model List<ProdutoModel>
 @{
-  ViewData["Title"] = "MuralVendasPage";
+    ViewData["Title"] = "MuralVendasPage";
 }
+
+
+<div class = "d-grid gap-2 d-md-flex justify-content-md-start"> 
+  <a class="btn btn-primary" role = "button" asp-controller="MuralVendas" asp-action="CarrinhoPage">Carrinho</a>
+</div>
 
 <div class="text-center">
     <br>
-    <h1 class="h3"><strong>Listagem de Produtos</strong></h1>
+    <h1 class="h3"><strong>@ViewData["Title"]</strong></h1>
     <br>
-
     <table class="table">
         <thead>
             <tr>
@@ -22,17 +25,21 @@
         <tbody>
             @if(Model != null && Model.Any())
             {
-                foreach (var produto in Model)
+                foreach (ProdutoModel item in Model)
                 {
                     <tr>
-                        <th scope="row">@produto.Nome</th>
-                        <td>@produto.Estoque</td>
-                        <td>@produto.Valor</td>
-                        <td>@produto.Cidade</td>
-                        <td>@produto.Id_Produto</td>
+                        <th scope="row">@item.Nome</th>
+                        <td>@item.Estoque</td>
+                        <td>@item.Valor</td>
+                        <td>@item.Cidade</td>
                         <td>
                             <div class="btn-group" role="group">
-                                <a role="button" class="btn btn-primary" asp-controller="InterfaceProdutor" asp-action="EditarProdutosPage" asp-route-id="@produto.Id_Produto">Comprar</a>
+                                <a role="button" class="btn btn-primary" asp-controller="MuralVendas" asp-action="ComprarPage" asp-route-id="@item.Id_Produto">Comprar</a>
+                                <form asp-controller="MuralVendas" asp-action="AdicionarCarrinho" method="post" class="d-inline">
+                                    <input type="hidden" name="id" value="@item.Id_Produto" />
+                                    <input type="number" name="quantidade" value="1" min="1" class="form-control d-inline w-50" />
+                                    <button type="submit" class="btn btn-danger">Adicionar ao Carrinho</button>
+                                </form>
                             </div>
                         </td>
                     </tr>

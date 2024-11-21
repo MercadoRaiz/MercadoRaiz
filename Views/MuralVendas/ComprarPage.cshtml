@@ -1,0 +1,90 @@
+@model ProdutoModel
+@{
+    ViewData["Title"] = "ComprarPage";
+}
+
+<h1>Comprar Produto</h1>
+
+<form asp-controller="MuralVendas" asp-action="ComprarProduto" method="post">
+
+    <!-- Campo hidden para o ID do produto -->
+    <input type="hidden" asp-for="Id_Produto" />
+
+    <div>
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Nome" readonly>
+        <label for="floatingInput"></label>
+        <br>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" asp-for="Cidade" class="form-control" placeholder="Cidade Cadastrada" readonly>
+        <label for="floatingInput">Cidade</label>
+    </div>
+    
+    <div class="form-floating mb-3">
+        <input type="text" asp-for="Estoque" class="form-control" placeholder="Estoque" readonly>
+        <label for="floatingInput">Estoque</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="number" id="quantidade" name="quantidadeComprada" class="form-control" placeholder="Quantidade" value="1" min="1" step="0.01">
+        <label for="floatingInput">Digite a quantidade que será comprada</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" id="valorTotal" class="form-control" placeholder="Valor da Compra" readonly>
+        <label for="floatingInput">Valor da Compra</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100"><strong>Comprar</strong></button>
+    <br>
+    <br>
+
+</form>
+
+<a class="btn btn-secondary w-100" asp-controller="MuralVendas" asp-action="Index" role="button">Voltar</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@section Scripts {
+    <script>
+        // Armazena o valor unitário do produto como um número decimal, substituindo vírgula por ponto
+        var valorUnitario = '@Model.Valor'.replace(",", ".");
+
+        document.getElementById('quantidade').addEventListener('input', function () {
+            var quantidade = parseFloat(this.value);
+
+            if (!isNaN(quantidade)) {
+                // Converte o valor unitário para float antes do cálculo
+                var valorUnitarioFloat = parseFloat(valorUnitario);
+                var valorTotal = (quantidade * valorUnitarioFloat).toFixed(2);
+                // Substitui o ponto por vírgula para exibir o valor em formato brasileiro
+                document.getElementById('valorTotal').value = `R$ ${valorTotal.replace(".", ",")}`;
+            }
+        });
+    </script>
+}
+
