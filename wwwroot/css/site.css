@@ -1,22 +1,163 @@
+html, body {
+  margin: 0; 
+  padding: 0; 
+  height: 100%; 
+}
+
 html {
   font-size: 14px;
+  position: relative;
 }
 
 @media (min-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 16px; 
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  margin-bottom: 60px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0; 
+  background-color: #f0f0f0; 
+  overflow: hidden;
+}
+
+body::after {
+  content: '';
+  display: block;
+  height: 0;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb; /* Efeito de foco */
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  background-color: #2f5d4e; 
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+  padding: 20px; 
+  border-radius: 8px;
+}
+
+.login-form h2 {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 1.5rem; 
+  text-align: center;
+}
+
+.login-form label {
+  color: white;
+  font-weight: bold;
+}
+
+.login-form .form-control {
+  background-color: #f8f9fa; 
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.login-form .btn-primary {
+  background-color: white;
+  color: #2f5d4e;
+  border: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.login-form .btn-primary:hover {
+  background-color: #e6e6e6;
+}
+
+.login-form a {
+  color: #ffcc66;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+  .login-form {
+    padding: 15px;
+    box-shadow: none; 
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f8f9fa;
+}
+
+.cadastro-form {
+  width: 100%;
+  max-width: 400px;
+  background-color: #2f5d4e; /* Fundo verde do formulário */
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ao redor do formulário */
+  border-radius: 8px; /* Arredondamento das bordas */
+}
+
+.cadastro-form h2 {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+.cadastro-form label {
+  font-weight: bold;
+  color: white;
+}
+
+.cadastro-form .form-control, .cadastro-form .form-select {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.cadastro-form .form-control::placeholder {
+  color: #6c757d;
+}
+
+.cadastro-form .btn-primary {
+  background-color: white;
+  color: #2f5d4e;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.cadastro-form .btn-primary:hover {
+  background-color: #e6e6e6;
+}
+
+.cadastro-form a {
+  color: #ffcc66;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cadastro-form a:hover {
+  text-decoration: underline;
 }
