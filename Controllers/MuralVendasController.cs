@@ -13,8 +13,9 @@ namespace MercadoRaiz.Controllers
         private readonly IMuralVendasRepositorio _muralvendasRepositorio;
         private readonly IPedidoRepositorio _pedidoRepositorio;
         private readonly ICarrinhoRepositorio _carrinhoRepositorio;
+        private readonly IUsuarioRepositorio _usuarioRepositorio;
 
-        public MuralVendasController(IMuralVendasRepositorio muralVendasRepositorio, IProdutoRepositorio produtoRepositorio, IPedidoRepositorio pedidoRepositorio, ICarrinhoRepositorio carrinhoRepositorio)
+        public MuralVendasController(IMuralVendasRepositorio muralVendasRepositorio, IProdutoRepositorio produtoRepositorio, IPedidoRepositorio pedidoRepositorio, ICarrinhoRepositorio carrinhoRepositorio, IUsuarioRepositorio usuarioRepositorio)
         {
             _produtoRepositorio = produtoRepositorio;
             _muralvendasRepositorio = muralVendasRepositorio;
@@ -26,7 +27,9 @@ namespace MercadoRaiz.Controllers
         public IActionResult Index()
         {
             List<ProdutoModel> resultado_lista = _muralvendasRepositorio.BuscarTodosProdutos();
+            ViewBag.TipoUsuario = GetTipoUsuario();
             return View(resultado_lista);
+            
         }
 
         public IActionResult ComprarPage(int id)
@@ -169,6 +172,12 @@ namespace MercadoRaiz.Controllers
         {
             var cpfCliente = User.FindFirst(ClaimTypes.Name)?.Value;
             return cpfCliente;
+        }
+
+        private string GetTipoUsuario()
+        {
+            var tipousuario = User.FindFirst(ClaimTypes.Role)?.Value;
+            return tipousuario;
         }
     }
 }

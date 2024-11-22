@@ -1,6 +1,6 @@
 @model List<PedidoModel>
 @{
-    ViewData["Title"] = "Relatório de Vendas do Produtor"; 
+    ViewData["Title"] = "Relatório de Compras"; 
 }
 
 
@@ -16,8 +16,7 @@
                     <th scope="col">Data</th>
                     <th scope="col">Produto</th>
                     <th scope="col">Quantidade</th>
-                    <th scope="col">Valor Venda</th>
-                    <th scope="col">CPF Cliente</th>
+                    <th scope="col">Valor Compra</th>
                 </tr>
             </thead>
             <tbody>
@@ -30,7 +29,6 @@
                         <td>@venda.Produto</td>
                         <td>@venda.Estoque</td>
                         <td>R$ @venda.Valor_Total.ToString("F2")</td>
-                        <td>@venda.CPF_Cliente</td>
                     </tr>
                    
 
@@ -44,5 +42,5 @@
     {
         <p>Nenhuma venda encontrada.</p>
     }
-    <a class="btn btn-primary w-100" asp-controller="InterfaceProdutor" asp-action="Index" role="button">Voltar</a>
+    <a class="btn btn-primary w-100" asp-controller="InterfaceCliente" asp-action="Index" role="button">Voltar</a>
 </div>

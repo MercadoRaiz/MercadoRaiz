@@ -35,5 +35,12 @@ namespace MercadoRaiz.Repositorio
                     .Where(p => p.CPF_Produtor == cpfProdutor) 
                     .ToList(); 
         }
+
+        public List<PedidoModel> BuscarPedidosPorCliente(string cpfCliente)
+         { 
+            return _bancoContext.Pedido 
+                    .Where(p => p.CPF_Cliente == cpfCliente) 
+                    .ToList(); 
+        }
     }
 }

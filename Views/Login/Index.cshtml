@@ -9,20 +9,35 @@
 }
 
 <div class="d-flex justify-content-center align-items-center vh-100">
+
+    
+
+
     <form asp-controller="Login" asp-action="ChecarLogin" method="post" class="login-form p-4 rounded">
+
+        
+
+
+        
         <input type="hidden" name="returnUrl" value="@returnUrl" />
         <h2 class="text-center mb-4">Login</h2>
         <div class="form-group mb-3">
-            <label for="cpfdigitado">E-mail</label>
-            <input type="text" name="cpfdigitado" id="cpfdigitado" class="form-control" placeholder="E-mail" required />
+            <label for="cpfdigitado">CPF</label>
+            <input type="text" name="cpfdigitado" id="cpfdigitado" class="form-control" placeholder="CPF" required />
+            @* <span asp-validation-for="CPF" class="text-danger"></span> *@
         </div>
         <div class="form-group mb-3">
             <label for="senhadigitada">Senha</label>
             <input type="password" name="senhadigitada" id="senhadigitada" class="form-control" placeholder="Senha" required />
+            @* <span asp-validation-for="Senha" class="text-danger"></span> *@
         </div>
         <button type="submit" class="btn btn-primary w-100">Login</button>
         <p class="text-center mt-3">
             Não possui uma conta? <a href="/cadastro">Clique aqui para cadastrar-se</a>
         </p>
+
+        @if (ViewBag.ErrorMessage != null) { <div class="alert alert-danger"> @ViewBag.ErrorMessage </div> }
     </form>
 </div>
+
+

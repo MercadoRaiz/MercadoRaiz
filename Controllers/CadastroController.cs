@@ -36,7 +36,7 @@ public class CadastroController : Controller
     [HttpPost]
     public IActionResult CadastrarUsuario(UsuarioModel usuario)
     {
-
+       
         _usuarioRepositorio.CadastrarUsuario(usuario);
         return RedirectToAction("Index", "Login");
 
