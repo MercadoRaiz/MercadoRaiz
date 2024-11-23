@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    color: white;
+  }
+  
+  .top-bar {
+    background-color: #256752;
+    color: white;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .top-bar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 15px;
+  }
+  
+  .top-bar a.btn {
+    margin-right: 15px;
+  }
+  
+  .container {
+    margin-top: 80px;
+  }
+  
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 120px; /* Ajusta a margem superior para descer os containers */
+    width: 300%; 
+    height: 600%; /* Defina a altura conforme necessário */ 
+    max-width: 100%; 
+    max-height: none;
+    margin-left: auto;
+    margin-right: auto;
+  
+    
+    height: 500%;
+    
+    
+  }
+  
+  .containerPrincipalinformativo {
+    background-color: rgba(44, 110, 73, 0.8); /* Verde */
+    padding: 2px;
+    border-radius: 10px;
+    width: 50%; /* Aumenta a largura */
+    height: 30%; /* Ajusta a altura automaticamente */
+    flex: 1;
+    color: white; /* Garante que o texto seja visível */
+    max-width: none; /* Remove qualquer limitação de largura */
+    margin-top: -10%;
+    margin-right: 200px; /* Espaçamento entre os containers */
+  
+  }
+  
+  .containerPrincipalbotoes {
+    
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%; /* Ajusta a largura */
+    height: auto; /* Ajusta a altura automaticamente */
+    color: white; /* Garante que o texto seja visível */
+    max-width: none; /* Remove qualquer limitação de largura */
+    flex: 1;
+  }
+  
+  .content-left {
+    text-align: center;
+  }
+  
+  .btn-card {
+    background-color: #193c32;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 300px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+  }
+  
+  .btn-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn-card:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem #ffcc66;
+  }
+  
+  .button-grid {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    justify-content: center;
+  }
+  
+  .textoPrincipal{
+    padding-top: -10%;
+    font-family: 'Roboto', sans-serif; /* Define a fonte Roboto */
+    font-size: 3.8rem; /* Aumenta o tamanho da fonte */ 
+    text-align: center; /* Centraliza o texto */ 
+    
+  }
+  
+  .imgLogoPrincipal{
+  
+  padding: -20%;
+  
+  
+  }
+  
+  .buttonSairConta{
+  
+  margin-top: 9px;
+  
+  margin-left: 90%;
+  
+  background-color: #193c32;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 170px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+  
+  }
+  
+  .imgLogoNavBar{
+  
+  width: 100px;
+  
+  margin-top: -68px;
+  
+  }
+  
+  .textoDescricao{
+  
+    margin-left: 40%;
+    margin-top: -3.8%;
+    font-size: 20px;
+    width: 100%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+  }

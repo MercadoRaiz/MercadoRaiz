@@ -1,63 +1,87 @@
 @model List<ProdutoModel>
 @{
-    ViewData["Title"] = "MuralVendasPage";
+    ViewData["Title"] = "Mural de Vendas";
 
     var tipoUsuario = ViewBag.TipoUsuario;
 }
 
 
-<div class = "d-grid gap-2 d-md-flex justify-content-md-start"> 
-  <a class="btn btn-primary" role = "button" asp-controller="MuralVendas" asp-action="CarrinhoPage">Carrinho</a>
-</div>
 
-<div class="text-center">
-    <br>
-    <h1 class="h3"><strong>@ViewData["Title"]</strong></h1>
-    <br>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Produto</th>
-                <th scope="col">Estoque</th>
-                <th scope="col">Valor</th>
-                <th scope="col">Cidade</th>
-                <th scope="col">Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            @if(Model != null && Model.Any())
-            {
-                foreach (ProdutoModel item in Model)
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Interface MuralVendas.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div class="top-bar">
+        
+        <h1 >Mural de Vendas</h1>
+    </div>
+
+<body>
+
+ 
+
+<div class="container">
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start"> 
+        <a class="btn btn-primary" role="button" asp-controller="MuralVendas" asp-action="CarrinhoPage">Carrinho</a>
+    </div>
+
+    <div class="text-center">
+        <br>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Estoque</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Cidade</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if(Model != null && Model.Any())
                 {
-                    @if(item.Estoque != 0){
-                    <tr>
-                        <th scope="row">@item.Nome</th>
-                        <td>@item.Estoque</td>
-                        <td>@item.Valor</td>
-                        <td>@item.Cidade</td>
-                        <td>
-                            <div class="btn-group" role="group">
-                                <a role="button" class="btn btn-primary" asp-controller="MuralVendas" asp-action="ComprarPage" asp-route-id="@item.Id_Produto">Comprar</a>
-                                <form asp-controller="MuralVendas" asp-action="AdicionarCarrinho" method="post" class="d-inline">
-                                    <input type="hidden" name="id" value="@item.Id_Produto" />
-                                    <input type="number" name="quantidade" value="1" min="1" max="@item.Estoque" class="form-control d-inline w-50"/>
-                                    <button type="submit" class="btn btn-danger">Adicionar ao Carrinho</button>
-                                </form>
-                            </div>
-                        </td>
-                    </tr>
+                    foreach (ProdutoModel item in Model)
+                    {
+                        @if(item.Estoque != 0)
+                        {
+                        <tr>
+                            <th scope="row">@item.Nome</th>
+                            <td>@item.Estoque</td>
+                            <td>R$ @item.Valor</td>
+                            <td>@item.Cidade</td>
+                            <td>
+                                <div class="d-inline text-center">
+                                    <a role="button" class="btn buttonComprar" asp-controller="MuralVendas" asp-action="ComprarPage" asp-route-id="@item.Id_Produto">Comprar</a>
+                                    <form asp-controller="MuralVendas" asp-action="AdicionarCarrinho" method="post" class="d-inline text-center">
+                                        <input type="hidden" name="id" value="@item.Id_Produto" />
+                                        <input type="number" name="quantidade" value="1" min="1" max="@item.Estoque" class="inputAddCarrinho"/>
+                                        <button type="submit" role="button" class="btn buttonAddCarrinho">Adicionar ao Carrinho</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                        }
                     }
                 }
-            }
-        </tbody>
-    </table>
-</div>
+            </tbody>
+        </table>
+    </div>
 
-@if (tipoUsuario == "Produtor") 
-{ 
-<a class="btn btn-secondary w-100" asp-controller="InterfaceProdutor" asp-action="Index" role="button">Voltar</a> 
-} 
-else if (tipoUsuario == "Cliente") 
-{
-<a class="btn btn-secondary w-100" asp-controller="InterfaceCliente" asp-action="Index" role="button">Voltar</a> 
-}
+    @if (tipoUsuario == "Produtor") 
+    { 
+        <a class="btn btn-secondary w-100" asp-controller="InterfaceProdutor" asp-action="Index" role="button">Voltar</a> 
+    } 
+    else if (tipoUsuario == "Cliente") 
+    {
+        <a class="btn btn-secondary w-100" asp-controller="InterfaceCliente" asp-action="Index" role="button">Voltar</a> 
+    }
+</div>
+</body>
+</html>

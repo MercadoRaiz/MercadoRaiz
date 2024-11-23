@@ -2,55 +2,48 @@
     ViewData["Title"] = "ProdutorPage";
 }
 
-
-
-<link rel="stylesheet" href="~/css/Interface Produtor.css" />
-
-<!--       -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Interface Produtor.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
 <body>
-
-<div class="top-bar">
-    <a href="#" class="btn btn-light cantoteladir ">Sair da conta</a>
-    <div class="container d-flex justify-content-between align-items-center">
-        <span class="top-bar-title">Mercado Raiz</span>
-        
-    </div>
-</div>
-
-<!-- Container principal da página -->
-<div class="container mt-5 d-flex justify-content-between align-items-start">
-    <!-- Seção esquerda com o título e logo -->
-    <div class="containerProdutor">
-        <h1 class="text-white">Página do Produtor</h1>
-        <img src="~/img/LogoMercadoRaiz.png" alt="Logo Mercado Raiz" class="img-fluid my-4">
-        <p class="text-white">Conecte-se com a natureza</p>
-    </div>
-
-
-
     
-</div>
+    <div class="top-bar">
+        <a href="#" class="btn btn-light buttonSairConta">Sair da conta</a>
+        <img src="~/css/LogoBranca.png" alt="Logo Mercado Raiz" class="imgLogoNavBar">
+        <p class="textoDescricao">Conecte-se com a natureza!!</p>
 
-<div class="container mt-5 d-flex justify-content-end">
-    <!-- Container dos botões -->
-    <div class="button-grid">
-        <a asp-controller="InterfaceProdutor" asp-action="CadastrarPage" 
-           class="btn btn-card m-3 p-4 text-center">
-            Cadastrar Produtos
-        </a>
-        <a asp-controller="InterfaceProdutor" asp-action="GerenciarProdutosPage" 
-           class="btn btn-card m-3 p-4 text-center">
-            Gerenciar Produtos
-        </a>
-        <a asp-controller="MuralVendas" asp-action="Index" 
-           class="btn btn-card m-3 p-4 text-center">
-            Mural de Vendas
-        </a>
-        <a asp-controller="InterfaceProdutor" asp-action="RelatorioVendasPage" 
-           class="btn btn-card m-3 p-4 text-center">
-            Relatório de Vendas
-        </a>
     </div>
-</div>
+
+    <!-- Container principal da página -->
+    <div class="main-container">
+        <!-- Container com o título e logo -->
+        <div class="containerPrincipalinformativo">
+            <h1 class="text-white textoPrincipal"><strong>Página do Produtor</strong></h1>
+            <img src="~/css/LogoBranca.png" alt="Logo Mercado Raiz" class="imgLogoPrincipal img-fluid my-4">
+        </div>
+
+        <!-- Container dos botões -->
+        <div class="containerPrincipalbotoes button-grid">
+            <a asp-controller="InterfaceProdutor" asp-action="CadastrarPage" class="btn btn-card m-3 p-4 text-center">
+                Cadastrar Produtos
+            </a>
+            <a asp-controller="InterfaceProdutor" asp-action="GerenciarProdutosPage" class="btn btn-card m-3 p-4 text-center">
+                Gerenciar Produtos
+            </a>
+            <a asp-controller="MuralVendas" asp-action="Index" class="btn btn-card m-3 p-4 text-center">
+                Mural de Vendas
+            </a>
+            <a asp-controller="InterfaceProdutor" asp-action="RelatorioVendasPage" class="btn btn-card m-3 p-4 text-center">
+                Relatório de Vendas
+            </a>
+        </div>
+    </div>
 
 </body>
+</html>

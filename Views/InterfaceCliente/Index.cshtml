@@ -1,13 +1,46 @@
 @{
-    ViewData["Title"] = "IndexCadastro";
+    ViewData["Title"] = "ClientePage";
 }
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Interface Cliente.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="top-bar">
+        <a href="#" class="btn btn-light buttonSairConta">Sair da conta</a>
+        <img src="~/css/LogoBranca.png" alt="Logo Mercado Raiz" class="imgLogoNavBar">
+        <p class="textoDescricao">Conecte-se com a natureza!!</p>
 
-<h1> Página Cliente</h1>
+    </div>
 
-<div class="text-center">
-    <p>Página com conteúdo do Usuário <strong>Cliente</strong>!</p>
-<a type= "button" asp-controller="MuralVendas" asp-action="Index">MuralVendas</a>
-<a type= "button" asp-controller="InterfaceCliente" asp-action="RelatorioComprasPage">RelatorioComprasPage</a>
+    <!-- Container principal da página -->
+    <div class="main-container">
+        <!-- Container com o título e logo -->
+        <div class="containerPrincipalinformativo">
+            <h1 class="text-white textoPrincipal"><strong>Página do Cliente</strong></h1>
+            <img src="~/css/LogoBranca.png" alt="Logo Mercado Raiz" class="imgLogoPrincipal img-fluid my-4">
+        </div>
 
-</div>
+        <!-- Container dos botões -->
+        <div class="containerPrincipalbotoes button-grid">
+            <a asp-controller="MuralVendas" asp-action="Index" class="btn btn-card m-3 p-4 text-center">
+                Mural de Vendas
+            </a>
+            <a asp-controller="InterfaceCliente" asp-action="RelatorioComprasPage" class="btn btn-card m-3 p-4 text-center">
+                Relatório de Compras
+            </a>
+        </div>
+    </div>
+
+    @* <div class="text-center mt-5">
+        <p>Página com conteúdo do Usuário <strong>Produtor</strong>!</p>
+    </div> *@
+</body>
+</html>
