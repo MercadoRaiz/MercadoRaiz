@@ -3,15 +3,54 @@
 }
 
 
-<h1> Página Produtor</h1>
 
-<div class="text-center">
-    <p>Página com conteúdo do Usuário <strong>Produtor</strong>!</p>
+<link rel="stylesheet" href="~/css/Interface Produtor.css" />
+
+<!--       -->
+<body>
+
+<div class="top-bar">
+    <a href="#" class="btn btn-light cantoteladir ">Sair da conta</a>
+    <div class="container d-flex justify-content-between align-items-center">
+        <span class="top-bar-title">Mercado Raiz</span>
+        
+    </div>
+</div>
+
+<!-- Container principal da página -->
+<div class="container mt-5 d-flex justify-content-between align-items-start">
+    <!-- Seção esquerda com o título e logo -->
+    <div class="containerProdutor">
+        <h1 class="text-white">Página do Produtor</h1>
+        <img src="~/img/LogoMercadoRaiz.png" alt="Logo Mercado Raiz" class="img-fluid my-4">
+        <p class="text-white">Conecte-se com a natureza</p>
+    </div>
+
+
 
     
 </div>
 
-<a type= "button" asp-controller="InterfaceProdutor" asp-action="CadastrarPage">Cadastrar Produtos </a>
-<a type= "button" asp-controller="InterfaceProdutor" asp-action="GerenciarProdutosPage">GerenciarProdutos </a>
-<a type= "button" asp-controller="MuralVendas" asp-action="Index">MuralVendas</a>
-<a type= "button" asp-controller="InterfaceProdutor" asp-action="RelatorioVendasPage">RelatorioVendasPage</a>
+<div class="container mt-5 d-flex justify-content-end">
+    <!-- Container dos botões -->
+    <div class="button-grid">
+        <a asp-controller="InterfaceProdutor" asp-action="CadastrarPage" 
+           class="btn btn-card m-3 p-4 text-center">
+            Cadastrar Produtos
+        </a>
+        <a asp-controller="InterfaceProdutor" asp-action="GerenciarProdutosPage" 
+           class="btn btn-card m-3 p-4 text-center">
+            Gerenciar Produtos
+        </a>
+        <a asp-controller="MuralVendas" asp-action="Index" 
+           class="btn btn-card m-3 p-4 text-center">
+            Mural de Vendas
+        </a>
+        <a asp-controller="InterfaceProdutor" asp-action="RelatorioVendasPage" 
+           class="btn btn-card m-3 p-4 text-center">
+            Relatório de Vendas
+        </a>
+    </div>
+</div>
+
+</body>

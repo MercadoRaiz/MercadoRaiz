@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\MercadoRaiz.bundle.scp.css"
     },
     {
+      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\css\\Interface Produtor.css",
+      "PackagePath": "staticwebassets\\css\\Interface Produtor.css"
+    },
+    {
+      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\css\\LogoMercadoRaiz.png",
+      "PackagePath": "staticwebassets\\css\\LogoMercadoRaiz.png"
+    },
+    {
+      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\css\\background.jpeg",
+      "PackagePath": "staticwebassets\\css\\background.jpeg"
+    },
+    {
       "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
