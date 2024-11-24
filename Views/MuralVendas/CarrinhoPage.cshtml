@@ -4,10 +4,24 @@
     decimal totalGeral = Model?.Sum(item => item?.Produto?.Valor * item?.Quantidade) ?? 0;
 }
 
-<div class="text-center">
-    <br>
-    <h1 class="h3"><strong>@ViewData["Title"]</strong></h1>
-    <br>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Interface Carrinho.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<div class="top-bar">
+        
+        <h1 clas >Carrinho de Compras</h1>
+    </div>
+
+<body>
+
+<div class="container">
     @if (Model != null && Model.Any())
     {
         <table class="table">
@@ -42,14 +56,17 @@
         <div class="text-right">
             <h4>Total: R$ @totalGeral.ToString("F2")</h4>
         </div>
+        <br>
         
         <form asp-controller="MuralVendas" asp-action="ComprarCarrinho" method="post">
-            <button type="submit" class="btn btn-success w-100">Comprar Todos os Itens</button>
+            <button type="submit" class="btn btn-success w-100"><i class="fa-solid fa-check"></i> Comprar Todos os Itens</button>
         </form>
+        <br>
     }
     else
     {
         <p>Seu carrinho está vazio.</p>
     }
-    <a class="btn btn-primary w-100" asp-controller="MuralVendas" asp-action="Index" role="button">Continuar Comprando</a>
+    <a class="btn btn-primary w-100" asp-controller="MuralVendas" asp-action="Index" role="button"><i class="fas fa-shopping-cart"></i>  Continuar Comprando</a>
 </div>
+</body>

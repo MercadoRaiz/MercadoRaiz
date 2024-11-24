@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mi+eBd1kJRNuUtTFq48S4IKSMc0P6eLDw8xePVZbsao=",
+  "Hash": "unWldJYeqX61ZRasN3QlOB5tTPVxMlODtTFbcawqtkE=",
   "Source": "MercadoRaiz",
   "BasePath": "_content/MercadoRaiz",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\iconeCarrinho.png"
+    },
+    {
+      "Identity": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\css\\Interface Carrinho.css",
+      "SourceId": "MercadoRaiz",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\",
+      "BasePath": "_content/MercadoRaiz",
+      "RelativePath": "css/Interface Carrinho.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Interface Carrinho.css"
     },
     {
       "Identity": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\css\\Interface Cliente.css",

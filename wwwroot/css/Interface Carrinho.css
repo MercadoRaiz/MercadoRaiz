@@ -54,7 +54,9 @@ body {
 
 h1 {
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .table {
@@ -115,61 +117,5 @@ h1 {
 
 
 
-.buttonAddCarrinho{
-
-    border: 2px solid #e07800;
-    transition-duration: 0.4s;
-    margin-top: -2px;
-    
-}
-      
-.buttonAddCarrinho:hover {
-    background-color: #e07800; /* Green */
-    color: white;
-}
-
-.buttonComprar
-{
-border: 2px solid #256752;
-transition-duration: 0.4s;
-}
-      
-.buttonComprar:hover {
-    background-color: #256752; /* Green */
-    color: white;
-}
-
-
-
-h1{
-
-
-text-align: center;
-
-margin-top: 10px;
-
-}
-
-
-.inputAddCarrinho{
-
-border: 2px solid #e07800;
-border-radius: 8px;
-
-max-height: none;
-height: 90%;
-width: 8%;
-
-margin-left: 20px;
-
-}
-
-
-.buttonCarrinho{
-
-    margin-left: -90%;
-    width: 20%;
-    height: 20%;
-}
 
 

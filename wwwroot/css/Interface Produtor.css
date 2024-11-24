@@ -45,39 +45,41 @@ body {
 }
 
 .main-container {
-  display: flex;
-  justify-content: center;
+  display:inline-flex;
+  justify-content:center;
   align-items: flex-start;
-  margin-top: 120px; /* Ajusta a margem superior para descer os containers */
-  width: 300%; 
-  height: 600%; /* Defina a altura conforme necessário */ 
-  max-width: 100%; 
-  max-height: none;
-  margin-left: auto;
-  margin-right: auto;
-
+  margin-top: -40%; /* Ajusta a margem superior para descer os containers */
   
-  height: 500%;
+
+  max-width: none; 
+  max-height: none;
+  margin-left: -10%;
+  margin-right: auto;
+  
+  height: 40%;
+  width: 120%; 
+  
+  
+  
   
   
 }
 
 .containerPrincipalinformativo {
   background-color: rgba(44, 110, 73, 0.8); /* Verde */
-  padding: 2px;
+  padding: 1;
   border-radius: 10px;
-  width: 50%; /* Aumenta a largura */
-  height: 30%; /* Ajusta a altura automaticamente */
+ 
   flex: 1;
   color: white; /* Garante que o texto seja visível */
   max-width: none; /* Remove qualquer limitação de largura */
-  margin-top: -10%;
+  
   margin-right: 200px; /* Espaçamento entre os containers */
 
 }
 
 .containerPrincipalbotoes {
-  
+ 
   padding: 20px;
   border-radius: 10px;
   width: 40%; /* Ajusta a largura */
@@ -85,6 +87,7 @@ body {
   color: white; /* Garante que o texto seja visível */
   max-width: none; /* Remove qualquer limitação de largura */
   flex: 1;
+  margin-top: 10px;
 }
 
 .content-left {
