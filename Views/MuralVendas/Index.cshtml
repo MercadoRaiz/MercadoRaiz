@@ -27,7 +27,8 @@
 <body>
 
 <div class="container">
-    
+    <h1 class="h3 text-center"><strong>Produtos à Venda</strong></h1>
+        <br>
         <a  class="btn btn-secondary" asp-controller="MuralVendas" asp-action="CarrinhoPage"><i class="fas fa-shopping-cart"></i> Carrinho de Compras</a>
         
         <table class="table">
@@ -72,11 +73,11 @@
 
     @if (tipoUsuario == "Produtor") 
     { 
-        <a class="btn btn-secondary w-100" asp-controller="InterfaceProdutor" asp-action="Index" role="button">Voltar</a> 
+        <a class="btn btn-secondary w-100" asp-controller="InterfaceProdutor" asp-action="Index" role="button"><strong><i class="fas fa-arrow-left"></i> VOLTAR</strong></a> 
     } 
     else if (tipoUsuario == "Cliente") 
     {
-        <a class="btn btn-secondary w-100" asp-controller="InterfaceCliente" asp-action="Index" role="button">Voltar</a> 
+        <a class="btn btn-secondary w-100" asp-controller="InterfaceCliente" asp-action="Index" role="button"><strong><i class="fas fa-arrow-left"></i> VOLTAR</strong></a> 
     }
 </div>
 </body>

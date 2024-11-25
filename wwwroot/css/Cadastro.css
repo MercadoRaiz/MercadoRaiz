@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('TelaCadastro.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    color: white;
+  }

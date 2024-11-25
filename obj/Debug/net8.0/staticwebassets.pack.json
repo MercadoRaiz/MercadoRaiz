@@ -1,299 +1,323 @@
 {
   "Files": [
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MercadoRaiz.bundle.scp.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MercadoRaiz.bundle.scp.css",
       "PackagePath": "staticwebassets\\MercadoRaiz.bundle.scp.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\css\\AdobeStock_1079633368_Preview.jpeg",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\css\\AdobeStock_1079633368_Preview.jpeg",
       "PackagePath": "staticwebassets\\css\\AdobeStock_1079633368_Preview.jpeg"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\css\\BackMuralVendas.png",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\css\\BackMuralVendas.png",
       "PackagePath": "staticwebassets\\css\\BackMuralVendas.png"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\css\\Cadastrar Produto.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\css\\Cadastrar Produto.css",
       "PackagePath": "staticwebassets\\css\\Cadastrar Produto.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\css\\Interface Carrinho.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\css\\Editar Produto.css",
+      "PackagePath": "staticwebassets\\css\\Editar Produto.css"
+    },
+    {
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\css\\Interface Carrinho.css",
       "PackagePath": "staticwebassets\\css\\Interface Carrinho.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\css\\Interface Cliente.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\css\\Interface Cliente.css",
       "PackagePath": "staticwebassets\\css\\Interface Cliente.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\css\\Interface MuralVendas.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\css\\Interface GerenciarProdutos.css",
+      "PackagePath": "staticwebassets\\css\\Interface GerenciarProdutos.css"
+    },
+    {
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\css\\Interface MuralVendas.css",
       "PackagePath": "staticwebassets\\css\\Interface MuralVendas.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\css\\Interface Produtor.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\css\\Interface Produtor.css",
       "PackagePath": "staticwebassets\\css\\Interface Produtor.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\css\\Logo.png",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\css\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login.css"
+    },
+    {
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\css\\Logo.png",
       "PackagePath": "staticwebassets\\css\\Logo.png"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\css\\LogoBranca.png",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\css\\LogoBranca.png",
       "PackagePath": "staticwebassets\\css\\LogoBranca.png"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\css\\background.jpeg",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\css\\Relatorio Compras.css",
+      "PackagePath": "staticwebassets\\css\\Relatorio Compras.css"
+    },
+    {
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\css\\Relatorio Vendas.css",
+      "PackagePath": "staticwebassets\\css\\Relatorio Vendas.css"
+    },
+    {
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\css\\TelaLogin.png",
+      "PackagePath": "staticwebassets\\css\\TelaLogin.png"
+    },
+    {
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\css\\background.jpeg",
       "PackagePath": "staticwebassets\\css\\background.jpeg"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\css\\iconeCarrinho.png",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\css\\iconeCarrinho.png",
       "PackagePath": "staticwebassets\\css\\iconeCarrinho.png"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\css\\vecteezy_shopping-cart-icon-png-on-transparent-background_19660726.png",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\css\\vecteezy_shopping-cart-icon-png-on-transparent-background_19660726.png",
       "PackagePath": "staticwebassets\\css\\vecteezy_shopping-cart-icon-png-on-transparent-background_19660726.png"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\js\\backend.js",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\js\\backend.js",
       "PackagePath": "staticwebassets\\js\\backend.js"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\js\\frontend.js",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\js\\frontend.js",
       "PackagePath": "staticwebassets\\js\\frontend.js"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\Git Hub Repositorios\\MercadoRaiz\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
