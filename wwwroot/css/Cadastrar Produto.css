@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    color: black;
+}
+
+
+.top-bar {
+    background-color: #256752;
+    color: white;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.top-bar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+.top-bar a.btn {
+    margin-right: 15px;
+}
+
+.container {
+    margin-top: 80px;
+}
+
+.main-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: -40%;
+    /* Ajusta a margem superior para descer os containers */
+
+
+    max-width: none;
+    max-height: none;
+    margin-left: -10%;
+    margin-right: auto;
+
+    height: 40%;
+    width: 120%;
+
+}
+
+.containerPrincipal {
+    background-color: rgba(44, 110, 73, 0.6); /* Verde com transparência */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 100px auto; /* Centraliza o container */
+    color: white;
+
+    
+}
+
+.containerPrincipal h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+    height: 130px;
+    text-align: center;
+}
+
+.form-select, .form-control {
+    background-color: rgba(255, 255, 255); /* Transparência nos inputs */
+    border-radius: 50px;
+    color: black;
+    border: none;
+    margin-bottom: 15px;
+    height: 50px;
+}
+
+.form-control:focus, .form-select:focus {
+    outline: none;
+    box-shadow: 0 0 5px #fff;
+}
+
+
+.buttonSairConta{
+
+    margin-top: 9px;
+    
+    margin-left: 90%;
+    
+    background-color: #193c32;
+      color: white;
+      border-radius: 10px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+      width: 170px;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+    
+    }
+    
+    .imgLogoNavBar{
+    
+    width: 100px;
+    
+    margin-top: -68px;
+    
+    }
+    
+    .textoDescricao{
+    
+      margin-left: 40%;
+      margin-top: -3.8%;
+      font-size: 20px;
+      width: 100%;
+      font-family:Verdana, Geneva, Tahoma, sans-serif
+    }
+
+.campos{
+    background-color: white;
+    border-radius: 50px;
+}

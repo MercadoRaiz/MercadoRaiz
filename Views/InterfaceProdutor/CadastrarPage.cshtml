@@ -4,7 +4,27 @@
     ViewData["Title"] = "CadastrarPage";
 }
 
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Cadastrar Produto.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <a href="#" class="btn btn-light buttonSairConta">Sair da conta</a>
+        <img src="~/css/LogoBranca.png" alt="Logo Mercado Raiz" class="imgLogoNavBar">
+        <p class="textoDescricao">Conecte-se com a natureza!!</p>
+
+    </div>
+
+    <div class="containerPrincipal">
 <h1> Cadastrar Produto</h1>
 
 <form asp-controller="InterfaceProdutor" asp-action="CadastrarProduto" method="post">
@@ -42,17 +62,17 @@
     <br>
 </div>
 
-    <div class="form-floating mb-3">
+    <div class="form-floating mb-3 campos">
         <input type="text" asp-for="Estoque" class="form-control" placeholder="Estoque">
         <label for="floatingInput">Estoque</label>
     </div>
 
-     <div class="form-floating mb-3">
+     <div class="form-floating mb-3 campos">
         <input type="decimal" asp-for="Valor" class="form-control" placeholder="Valor do Produto">
         <label for="floatingInput">Valor do Produto</label>
     </div>
 
-    <div class="form-floating mb-3">
+    <div class="form-floating mb-3 campos">
         <input type="text" asp-for="Cidade" class="form-control" placeholder="Cidade">
         <label for="floatingInput">Cidade</label>
     </div>
@@ -64,3 +84,6 @@
     <br>
     <a class="btn btn-secondary w-100" asp-controller="InterfaceProdutor" asp-action="Index" role="button">Voltar</a>
 </form>
+</div>
+</body>
+</html>
