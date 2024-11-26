@@ -12,6 +12,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <script src="~/js/frontend.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewData["Title"]</title>
@@ -37,7 +38,7 @@
         <h2 class="text-center mb-4">Login</h2>
         <div class="form-group mb-3">
             <label for="cpfdigitado">CPF</label>
-            <input type="text" name="cpfdigitado" id="cpfdigitado" class="form-control" placeholder="CPF" required />
+            <input type="text" name="cpfdigitado" id="cpfdigitado" class="form-control" placeholder="CPF" required oninput="mascaraCPF(this)"/>
             @* <span asp-validation-for="CPF" class="text-danger"></span> *@
         </div>
         <div class="form-group mb-3">
