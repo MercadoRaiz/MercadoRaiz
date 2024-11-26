@@ -6439,19 +6439,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MW Contabilidade\\.nuget\\packages\\": {}
+    "C:\\Users\\felip\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\MercadoRaiz.csproj",
+      "projectUniqueName": "D:\\Git Hub Repositorios\\MercadoRaiz\\MercadoRaiz.csproj",
       "projectName": "MercadoRaiz",
-      "projectPath": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\MercadoRaiz.csproj",
-      "packagesPath": "C:\\Users\\MW Contabilidade\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MW Contabilidade\\Documents\\GitHub\\MercadoRaiz\\obj\\",
+      "projectPath": "D:\\Git Hub Repositorios\\MercadoRaiz\\MercadoRaiz.csproj",
+      "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
+      "outputPath": "D:\\Git Hub Repositorios\\MercadoRaiz\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\MW Contabilidade\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6524,7 +6529,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

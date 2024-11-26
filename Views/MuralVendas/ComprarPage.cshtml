@@ -1,75 +1,61 @@
 @model ProdutoModel
+
 @{
     ViewData["Title"] = "ComprarPage";
 }
 
-<h1>Comprar Produto</h1>
-
-<form asp-controller="MuralVendas" asp-action="ComprarProduto" method="post">
-
-    <!-- Campo hidden para o ID do produto -->
-    <input type="hidden" asp-for="Id_Produto" />
-
-    <div>
-        <input type="text" asp-for="Nome" class="form-control" placeholder="Nome" readonly>
-        <label for="floatingInput"></label>
-        <br>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/ComprarProduto.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="top-bar">
+        <h1><strong>Comprar Produto</strong></h1>
     </div>
 
-    <div class="form-floating mb-3">
-        <input type="text" asp-for="Cidade" class="form-control" placeholder="Cidade Cadastrada" readonly>
-        <label for="floatingInput">Cidade</label>
+    <div class="containerPrincipal">
+        
+        <form asp-controller="MuralVendas" asp-action="ComprarProduto" method="post">
+            <input type="hidden" asp-for="Id_Produto" />
+
+            <div>
+                <label for="">Produto</label>
+                <input type="text" asp-for="Nome" class="form-control" placeholder="Nome" readonly>
+            </div>
+
+            <div >
+                <label for="">Cidade</label>
+                <input type="text" asp-for="Cidade" class="form-control" placeholder="Cidade Cadastrada" readonly>
+            </div>
+
+            <div >
+                <label for="">Estoque</label>
+                <input type="text" asp-for="Estoque" class="form-control" placeholder="Estoque" readonly>
+            </div>
+
+            <div>
+                <label for="">Quantidade</label>
+                <input type="number" id="quantidade" name="quantidadeComprada" value="1" min="1" max="@Model.Estoque" class="form-control" placeholder="Quantidade" value="1" min="1">
+            </div>
+
+            <div>
+                <label for="">Valor Total</label>
+                <input type="text" id="valorTotal" class="form-control" placeholder="Valor da Compra" readonly>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100"><strong><i class="fas fa-shopping-cart"></i> Comprar</strong></button>
+            <br><br>
+            <a class="btn btn-secondary w-100" asp-controller="MuralVendas" asp-action="Index" role="button"><strong><i class="fas fa-arrow-left"></i> Voltar</strong></a>
+        </form>
     </div>
-    
-    <div class="form-floating mb-3">
-        <input type="text" asp-for="Estoque" class="form-control" placeholder="Estoque" readonly>
-        <label for="floatingInput">Estoque</label>
-    </div>
 
-    <div class="form-floating mb-3">
-        <input type="number" id="quantidade" name="quantidadeComprada" class="form-control" placeholder="Quantidade" value="1" min="1" step="0.01">
-        <label for="floatingInput">Digite a quantidade que será comprada</label>
-    </div>
-
-    <div class="form-floating mb-3">
-        <input type="text" id="valorTotal" class="form-control" placeholder="Valor da Compra" readonly>
-        <label for="floatingInput">Valor da Compra</label>
-    </div>
-
-    <button type="submit" class="btn btn-primary w-100"><strong>Comprar</strong></button>
-    <br>
-    <br>
-
-</form>
-
-<a class="btn btn-secondary w-100" asp-controller="MuralVendas" asp-action="Index" role="button">Voltar</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@section Scripts {
+    @section Scripts {
     <script>
         // Armazena o valor unitário do produto como um número decimal, substituindo vírgula por ponto
         var valorUnitario = '@Model.Valor'.replace(",", ".");
@@ -87,4 +73,5 @@
         });
     </script>
 }
-
+</body>
+</html>

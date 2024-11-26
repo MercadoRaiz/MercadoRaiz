@@ -6,6 +6,7 @@ using System.Security.Claims;
 
 namespace MercadoRaiz.Controllers;
 
+
 [Authorize(Policy = "Cliente")]
 public class InterfaceClienteController : Controller
 {
