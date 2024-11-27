@@ -1,0 +1,57 @@
+@model List<PedidoModel>
+@{
+    ViewData["Title"] = "Relatório de Compras"; 
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Relatorio Compras.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="top-bar">
+        <h1>Relatório de Compras</h1>
+    </div>
+
+    <div class="container">
+        <h1 class="h3 text-center"><strong>@ViewData["Title"]</strong></h1>
+        <br>
+        @if (Model != null && Model.Any())
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Data</th>
+                        <th scope="col">Produto</th>
+                        <th scope="col">Quantidade</th>
+                        <th scope="col">Valor Compra</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var venda in Model)
+                    {
+                        <tr>
+                            <td>@venda.Data.ToString("dd/MM/yyyy")</td>
+                            <td>@venda.Produto</td>
+                            <td>@venda.Estoque</td>
+                            <td>R$ @venda.Valor_Total.ToString("F2")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>Nenhuma compra encontrada.</p>
+        }
+        <a class="btn btn-primary w-100" asp-controller="InterfaceCliente" asp-action="Index" role="button">
+            <i class="fas fa-arrow-left"></i> VOLTAR
+        </a>
+    </div>
+</body>
+</html>

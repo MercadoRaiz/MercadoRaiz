@@ -1,0 +1,72 @@
+@model List<CarrinhoItemModel>
+@{
+    ViewData["Title"] = "Carrinho de Compras";
+    decimal totalGeral = Model?.Sum(item => item?.Produto?.Valor * item?.Quantidade) ?? 0;
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Interface Carrinho.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<div class="top-bar">
+        
+        <h1 clas >Carrinho de Compras</h1>
+    </div>
+
+<body>
+
+<div class="container">
+    @if (Model != null && Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Valor Unitário</th>
+                    <th scope="col">Valor Total</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item?.Produto?.Nome</td>
+                        <td>@item?.Quantidade</td>
+                        <td>R$ @item?.Produto?.Valor.ToString("F2")</td>
+                        <td>R$ @(item?.Produto?.Valor * item?.Quantidade)</td>
+                        <td>
+                            <form asp-controller="MuralVendas" asp-action="RemoverDoCarrinho" method="post" class="d-inline">
+                                <input type="hidden" name="id" value="@item?.Id" />
+                                <button type="submit" class="btn btn-danger">Remover</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="text-right">
+            <h4>Total: R$ @totalGeral.ToString("F2")</h4>
+        </div>
+        <br>
+        
+        <form asp-controller="MuralVendas" asp-action="ComprarCarrinho" method="post">
+            <button type="submit" class="btn btn-success w-100"><i class="fa-solid fa-check"></i> Comprar Todos os Itens</button>
+        </form>
+        <br>
+    }
+    else
+    {
+        <p>Seu carrinho está vazio.</p>
+    }
+    <a class="btn btn-primary w-100" asp-controller="MuralVendas" asp-action="Index" role="button"><i class="fas fa-shopping-cart"></i>  Continuar Comprando</a>
+</div>
+</body>

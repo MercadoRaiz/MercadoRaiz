@@ -10,6 +10,10 @@ public class ProdutoModel
  public int Estoque {get; set;}
  public decimal Valor {get; set;}
  public string CPF_Produtor {get; set;}
+ public string Cidade { get; set; }
+ public ESiglaEstado UF {get; set; }
+
+
 
 }
 

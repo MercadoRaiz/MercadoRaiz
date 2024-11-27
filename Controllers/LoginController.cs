@@ -35,6 +35,12 @@ public class LoginController : Controller
 [HttpPost]
 public async Task<IActionResult> ChecarLogin(string cpfdigitado, string senhadigitada, string returnUrl = null)
 {
+    
+        cpfdigitado = new string(cpfdigitado.Where(char.IsDigit).ToArray()); 
+        
+
+try {
+  
     var resultado = _usuarioRepositorio.LoginUsuario(cpfdigitado, senhadigitada);
     var tipousuario = _usuarioRepositorio.TipoUsuario(cpfdigitado);
 
@@ -78,11 +84,22 @@ public async Task<IActionResult> ChecarLogin(string cpfdigitado, string senhadig
             
         } return RedirectToAction("Index", "InterfaceCliente");
     }
+        
+    
+  }catch (Exception ex) {
 
-    ViewBag.ErrorMessage = "CPF ou senha incorretos";
+    
+    ViewBag.ErrorMessage1 = "CPF ou senha inválidos.";
+    
+  }
+    ViewBag.ErrorMessage2 = "CPF ou senha inválidos.";
+    ViewBag.resultado = false;
     return View("Index");
+
+}
+    
 }
 
 
-}
+
 

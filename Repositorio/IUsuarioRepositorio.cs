@@ -11,6 +11,7 @@ namespace MercadoRaiz.Repositorio
         bool LoginUsuario (string cpf, string senha);
 
         string TipoUsuario(string cpf);
+        bool verificarDuplicidadeCPF(string cpf);
 
 
     }

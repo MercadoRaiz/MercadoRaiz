@@ -22,6 +22,31 @@ namespace MercadoRaiz.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("MercadoRaiz.Models.CarrinhoItemModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CPF_Cliente")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("ProdutoId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Quantidade")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProdutoId");
+
+                    b.ToTable("CarrinhoItem");
+                });
+
             modelBuilder.Entity("MercadoRaiz.Models.ItemPedidoModel", b =>
                 {
                     b.Property<int>("Id_Pedido")
@@ -60,6 +85,13 @@ namespace MercadoRaiz.Migrations
                     b.Property<DateTime>("Data")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<int>("Estoque")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Produto")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<decimal>("Valor_Total")
                         .HasColumnType("numeric");
 
@@ -80,12 +112,20 @@ namespace MercadoRaiz.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("Cidade")
+                        .IsRequired()
+                        .HasColumnType("VARCHAR(25)");
+
                     b.Property<int>("Estoque")
                         .HasColumnType("integer");
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("VARCHAR(25)");
+                        .HasColumnType("text");
+
+                    b.Property<string>("UF")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<decimal>("Valor")
                         .HasColumnType("numeric");
@@ -93,31 +133,6 @@ namespace MercadoRaiz.Migrations
                     b.HasKey("Id_Produto");
 
                     b.ToTable("Produto", (string)null);
-                });
-
-            modelBuilder.Entity("MercadoRaiz.Models.PropriedadeModel", b =>
-                {
-                    b.Property<int>("IdPropriedade")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("IdPropriedade"));
-
-                    b.Property<string>("CPFProdutor")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Cidade")
-                        .IsRequired()
-                        .HasColumnType("VARCHAR(25)");
-
-                    b.Property<string>("SiglaEstado")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("IdPropriedade");
-
-                    b.ToTable("Propriedade", (string)null);
                 });
 
             modelBuilder.Entity("MercadoRaiz.Models.UsuarioModel", b =>
@@ -151,6 +166,17 @@ namespace MercadoRaiz.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Usuario", (string)null);
+                });
+
+            modelBuilder.Entity("MercadoRaiz.Models.CarrinhoItemModel", b =>
+                {
+                    b.HasOne("MercadoRaiz.Models.ProdutoModel", "Produto")
+                        .WithMany()
+                        .HasForeignKey("ProdutoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Produto");
                 });
 #pragma warning restore 612, 618
         }

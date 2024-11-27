@@ -1,0 +1,84 @@
+@model List<ProdutoModel>
+@{
+    ViewData["Title"] = "Mural de Vendas";
+
+    var tipoUsuario = ViewBag.TipoUsuario;
+}
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Interface MuralVendas.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+
+</head>
+<div class="top-bar">
+        
+        <h1 >Mural de Vendas</h1>
+    </div>
+
+<body>
+
+<div class="container">
+    <h1 class="h3 text-center"><strong>Produtos à Venda</strong></h1>
+        <br>
+        <a  class="btn btn-secondary" asp-controller="MuralVendas" asp-action="CarrinhoPage"><i class="fas fa-shopping-cart"></i> Carrinho de Compras</a>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Estoque</th>
+                    <th scope="col">Valor Unitário</th>
+                    <th scope="col">Cidade</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if(Model != null && Model.Any())
+                {
+                    foreach (ProdutoModel item in Model)
+                    {
+                        @if(item.Estoque != 0)
+                        {
+                        <tr>
+                            <th scope="row">@item.Nome</th>
+                            <td>@item.Estoque</td>
+                            <td>R$ @item.Valor</td>
+                            <td>@item.Cidade</td>
+                            <td>
+                                <div class="d-inline text-center">
+                                    <a role="button" class="btn buttonComprar" asp-controller="MuralVendas" asp-action="ComprarPage" asp-route-id="@item.Id_Produto">Comprar</a>
+                                    <form asp-controller="MuralVendas" asp-action="AdicionarCarrinho" method="post" class="d-inline text-center">
+                                        <input type="hidden" name="id" value="@item.Id_Produto" />
+                                        <input type="number" name="quantidade" value="1" min="1" max="@item.Estoque" class="inputAddCarrinho"/>
+                                        <button type="submit" role="button" class="btn buttonAddCarrinho">Adicionar ao Carrinho</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                        }
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+    @if (tipoUsuario == "Produtor") 
+    { 
+        <a class="btn btn-secondary w-100" asp-controller="InterfaceProdutor" asp-action="Index" role="button"><strong><i class="fas fa-arrow-left"></i> VOLTAR</strong></a> 
+    } 
+    else if (tipoUsuario == "Cliente") 
+    {
+        <a class="btn btn-secondary w-100" asp-controller="InterfaceCliente" asp-action="Index" role="button"><strong><i class="fas fa-arrow-left"></i> VOLTAR</strong></a> 
+    }
+</div>
+</body>
+</html>

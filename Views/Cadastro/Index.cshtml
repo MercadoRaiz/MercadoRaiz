@@ -1,26 +1,61 @@
 ﻿@model UsuarioModel
 @{
     ViewData["Title"] = "IndexCadastro";
+   var resultado = ViewBag.resultado;
+
 }
-<h1>TELA CADASTRO</h1>
 
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-<form asp-controller="Cadastro" asp-action="CadastrarUsuario" method="post">
-<input type="text" asp-for="Nome" placeholder="Nome Completo">
-<input type="text" asp-for="CPF" placeholder="CPF">
-<input type="text" asp-for="Celular" placeholder="Celular">
-<input type="text" asp-for="Senha" placeholder="Senha">
+<head>
+    <script src="~/js/frontend.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Cadastro.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-<select asp-for="TipoUsuario">
-    <option value="Cliente">Cliente</option>
-    <option value="Produtor">Produtor</option>
-</select>
+</head>
 
+<body>
 
-<button type="submit">CADASTRAR</button>
+    <div class="d-flex justify-content-end align-items-center vh-100">
+        <form asp-controller="Cadastro" asp-action="CadastrarUsuario" method="post" class="cadastro-form p-4 rounded">
+            <h2 class="text-center mb-4">Cadastrar-se</h2>
+            <div class="form-group mb-3">
+                <label for="Nome">Nome Completo</label>
+                <input type="text" asp-for="Nome" id="Nome" class="form-control" placeholder="Nome Completo" required />
+            </div>
+            <div class="form-group mb-3">
+                <label for="CPF">CPF</label>
+                <input type="text" asp-for="CPF" id="CPF" class="form-control" placeholder="CPF" minlength="14" maxlength="14" required
+                    oninput="mascaraCPF(this)" />
+            </div>
+            <div class="form-group mb-3">
+                <label for="Celular">Celular</label>
+                <input type="text" asp-for="Celular" id="Celular" class="form-control" placeholder="Celular"
+                    maxlength="15" required oninput="mascaraCelular(this)" />
+            </div>
 
-</form>
-
-
-        <a asp-controller="Login" asp-action="Index">Acesso Tela Login</a>
-
+            <div class="form-group mb-3">
+                <label for="Senha">Senha</label>
+                <input type="password" asp-for="Senha" id="Senha" class="form-control" placeholder="Senha" required />
+            </div>
+            <div class="form-group mb-3">
+                <label for="TipoUsuario">Tipo de Usuário</label>
+                <select asp-for="TipoUsuario" id="TipoUsuario" class="form-select" required>
+                    <option value="Cliente">Cliente</option>
+                    <option value="Produtor">Produtor</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Cadastrar-se</button>
+            <p class="text-center mt-3">
+                <a asp-controller="Login" asp-action="Index" class="text-decoration-none text-white">Acesso Tela
+                    Login</a>
+            </p>
+            @if (ViewBag.ErrorMessage != null || resultado == true) { <div class="alert alert-danger text-center"> @ViewBag.ErrorMessage </div> }
+        </form>
+    </div>
+</body>

@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using MercadoRaiz.Configuration;
 using MercadoRaiz.Repositorio;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -17,6 +18,11 @@ options.UseNpgsql(Configuration.GetConnectionString("DataBase")));
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();//Toda vez que minha IUsuarioRepositorio for chamada quero que ele use todos atributos e metodos da Usuario
 builder.Services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
 
+builder.Services.AddScoped<IMuralVendasRepositorio, MuralVendasRepositorio>();
+
+builder.Services.AddScoped<IPedidoRepositorio, PedidoRepositorio>();
+
+builder.Services.AddScoped<ICarrinhoRepositorio, CarrinhoRepositorio>();
 
 
 
@@ -27,6 +33,13 @@ builder.Services.AddAuthentication("CookieAuth") .AddCookie("CookieAuth", config
 builder.Services.AddAuthorization(options => { 
 options.AddPolicy("Cliente", policy => policy.RequireRole("Cliente")); 
 options.AddPolicy("Produtor", policy => policy.RequireRole("Produtor")); }); 
+
+builder.Services.AddAuthorization(options => { 
+    
+    options.AddPolicy("ProdutorOuCliente", policy => policy.RequireAssertion(
+        context => context.User.HasClaim(
+        c => (c.Type == "TipoUsuario" && c.Value == "Produtor") || 
+        (c.Type == "TipoUsuario" && c.Value == "Cliente")))); });
 
 builder.Services.AddSession(options => { 
     options.IdleTimeout = TimeSpan.FromHours(1); 

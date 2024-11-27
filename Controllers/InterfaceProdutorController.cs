@@ -4,17 +4,26 @@ using MercadoRaiz.Repositorio;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using System.IO; using Microsoft.AspNetCore.Mvc.ViewEngines;
+ using Microsoft.AspNetCore.Mvc.Rendering;
+ using Microsoft.Extensions.DependencyInjection;
+
+
 namespace MercadoRaiz.Controllers;
 
 [Authorize(Policy = "Produtor")]
 public class InterfaceProdutorController : Controller
 {
     private readonly IProdutoRepositorio _produtoRepositorio;//fazendo a injeção de dependencia
+    private readonly IPedidoRepositorio _pedidoRepositorio;
 
-    public InterfaceProdutorController(IProdutoRepositorio produtoRepositorio)
+
+    public InterfaceProdutorController(IProdutoRepositorio produtoRepositorio, IPedidoRepositorio pedidoRepositorio)
      {
-
+        _pedidoRepositorio = pedidoRepositorio;
          _produtoRepositorio = produtoRepositorio;
+        
      }
 
 //VISUALIZAÇÃO
@@ -95,6 +104,11 @@ public class InterfaceProdutorController : Controller
     }
 
 
+    public IActionResult RelatorioVendasPage() {
+        var cpfProdutor = GetCPFProdutor(); 
+        List<PedidoModel> pedidos = _pedidoRepositorio.BuscarPedidosPorProdutor(cpfProdutor); 
+        return View(pedidos); }
+
 
 
 
@@ -104,9 +118,31 @@ public class InterfaceProdutorController : Controller
     produto.CPF_Produtor = cpfProdutor;
 
     return produto.CPF_Produtor;
+    }
+
+    public string GetCPFProdutor(){
+
+    var cpfProdutor = User.FindFirst(ClaimTypes.Name)?.Value;
+    
+
+    return cpfProdutor;
+    }
+
+
+     public IActionResult RelatorioComprasProdutorPage() {
+        var cpfCliente = GetCPFCliente(); 
+        List<PedidoModel> pedidos = _pedidoRepositorio.BuscarPedidosPorCliente(cpfCliente); 
+        return View(pedidos); }
+
+
+         private string GetCPFCliente()
+        {
+            var cpfCliente = User.FindFirst(ClaimTypes.Name)?.Value;
+            return cpfCliente;
+        }
+
+  
+
 
     }
 
-    
-
-}

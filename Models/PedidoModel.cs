@@ -9,6 +9,9 @@ namespace MercadoRaiz.Models
         public decimal Valor_Total { get; set; }
         public string CPF_Cliente { get; set; }
         public string CPF_Produtor { get; set;}
+        public string Produto{ get; set; }
+        public int Estoque { get; set; }
+
         
     }
 }

@@ -3,47 +3,70 @@
   ViewData["Title"] = "GerenciarProdutosPage";
 }
 
-<div class = "text-center">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Interface GerenciarProdutos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="top-bar">
+        <h1>Gerenciar Produtos</h1>
+    </div>
 
-<div class = "d-grid gap-2 d-md-flex justify-content-md-start"> 
-  <a class="btn btn-primary" role = "button" asp-controller="InterfaceProdutor" asp-action="CadastrarPage">Cadastrar Novo Produto</a>
-  </div>
-<br>
-<h1 class="h3"><strong>Listagem de Produtos</strong></h1>
-<br>
+    <div class="container">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start"> 
+            <a class="btn btn-primary" role="button" asp-controller="InterfaceProdutor" asp-action="CadastrarPage">
+                <i class="fas fa-plus"></i> Cadastrar Novo Produto
+            </a>
+        </div>
+        <br>
+        <h1 class="h3 text-center"><strong>Listagem de Produtos</strong></h1>
+        <br>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Produto</th>
-      <th scope="col">Valor</th>
-      <th scope="col">Estoque</th>
-      <th scope="col">ID</th>
-      <th scope="col">Ações</th>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Estoque</th>
+                    <th scope="col">Cidade</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if(Model != null && Model.Any())
+                {
+                    foreach (ProdutoModel produto in Model)
+                    {
+                        <tr>
+                            <th scope="row">@produto.Nome</th>
+                            <td>R$ @produto.Valor</td>
+                            <td>@produto.Estoque</td>
+                            <td>@produto.Cidade</td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <a role="button" class="btn btn-primary" asp-controller="InterfaceProdutor" asp-action="EditarProdutosPage" asp-route-id="@produto.Id_Produto">
+                                        <i class="fas fa-edit"></i> Editar
+                                    </a>
+                                    <a role="button" class="btn btn-danger" asp-controller="InterfaceProdutor" asp-action="Remover" asp-route-id="@produto.Id_Produto">
+                                        <i class="fas fa-trash-alt"></i> Remover
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
 
-    </tr>
-  </thead>
-   <tbody>
-    @if(Model != null && Model.Any())
-    {
-      foreach (ProdutoModel produto in Model)
-      {
-        <tr>
-          <th scope = "row">@produto.Nome</th>
-          <td>@produto.Valor</td>
-          <td>@produto.Estoque</td>
-          <td>@produto.Id_Produto</td>>          
-          <td>
-              <div class="btn-group" role="group">
-                <a role="button" class="btn btn-primary" asp-controller="InterfaceProdutor" asp-action="EditarProdutosPage" asp-route-id = "@produto.Id_Produto">Editar</a>
-                <a role="button" class="btn btn-danger" asp-controller="InterfaceProdutor" asp-action="Remover"  asp-route-id = "@produto.Id_Produto" >Remover</a>
-                </div>
-          </td>
-          </tr>
-      }
-    }
-  </tbody> 
-</table>
-</div>
-
-<a class="btn btn-secondary w-100" asp-controller="InterfaceProdutor" asp-action="Index" role="button">Voltar</a>
+    <a class="btn btn-secondary w-100" asp-controller="InterfaceProdutor" asp-action="Index" role="button">
+        <i class="fas fa-arrow-left"></i> Voltar
+    </a>
+</body>
+</html>

@@ -2,14 +2,53 @@
     ViewData["Title"] = "ProdutorPage";
 }
 
-
-<h1> Página Produtor</h1>
-
-<div class="text-center">
-    <p>Página com conteúdo do Usuário <strong>Produtor</strong>!</p>
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Interface Produtor.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
     
-</div>
+    <div class="top-bar">
+        
+        <a asp-controller="Login" asp-action="Index" class="btn btn-light buttonSairConta">Sair da conta</a>
+        
+        <img src="~/css/LogoBranca.png" alt="Logo Mercado Raiz" class="imgLogoNavBar">
+        
 
-<a type= "button" asp-controller="InterfaceProdutor" asp-action="CadastrarPage">Cadastrar Produtos </a>
-<a type= "button" asp-controller="InterfaceProdutor" asp-action="GerenciarProdutosPage">GerenciarProdutos </a>
+    </div>
+
+    <!-- Container principal da página -->
+    <div class="main-container">
+        <!-- Container com o título e logo -->
+        <div class="containerPrincipalinformativo">
+            <h1 class="text-white textoPrincipal"><strong>Página do Produtor</strong></h1>
+            <img src="~/css/LogoBranca.png" alt="Logo Mercado Raiz" class="imgLogoPrincipal img-fluid my-4">
+        </div>
+
+        <!-- Container dos botões -->
+        <div class="containerPrincipalbotoes button-grid">
+            <a asp-controller="InterfaceProdutor" asp-action="CadastrarPage" class="btn btn-card m-3 p-4 text-center">
+                Cadastrar Produtos
+            </a>
+            <a asp-controller="InterfaceProdutor" asp-action="GerenciarProdutosPage" class="btn btn-card m-3 p-4 text-center">
+                Gerenciar Produtos
+            </a>
+            <a asp-controller="MuralVendas" asp-action="Index" class="btn btn-card m-3 p-4 text-center">
+                Mural de Vendas
+            </a>
+            <a asp-controller="InterfaceProdutor" asp-action="RelatorioVendasPage" class="btn btn-card m-3 p-4 text-center">
+                Relatório de Vendas
+            </a>
+            <a asp-controller="InterfaceProdutor" asp-action="RelatorioComprasProdutorPage" class="btn btn-card m-3 p-4 text-center">
+                Relatório de Compras
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
