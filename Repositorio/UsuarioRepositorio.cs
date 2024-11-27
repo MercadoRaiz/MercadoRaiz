@@ -48,6 +48,16 @@ namespace MercadoRaiz.Repositorio
 
             return usuario.TipoUsuario.ToString();
         }
+
+       public bool verificarDuplicidadeCPF(string cpf)
+{
+    // Usando LINQ para verificar se o CPF existe no banco de dados
+    bool existe = _bancoContext.Usuario.Any(u => u.CPF == cpf);
+    return existe;
+}
+
+
+   
     }
 
 }

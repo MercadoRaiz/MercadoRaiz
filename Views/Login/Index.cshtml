@@ -1,6 +1,12 @@
 ﻿@model UsuarioModel
 @{
     ViewData["Title"] = "Login";
+
+    var resultado = ViewBag.resultado;
+    var errormessage1 = ViewBag.ErrorMessage1;
+    var errormessage2 = ViewBag.ErrorMessage2;
+    
+
 }
 
 
@@ -38,7 +44,7 @@
         <h2 class="text-center mb-4">Login</h2>
         <div class="form-group mb-3">
             <label for="cpfdigitado">CPF</label>
-            <input type="text" name="cpfdigitado" id="cpfdigitado" class="form-control" placeholder="CPF" required oninput="mascaraCPF(this)"/>
+            <input type="text" name="cpfdigitado" id="cpfdigitado" minlength="14" maxlength="14"  class="form-control" placeholder="CPF" required oninput="mascaraCPF(this)"/>
             @* <span asp-validation-for="CPF" class="text-danger"></span> *@
         </div>
         <div class="form-group mb-3">
@@ -51,7 +57,11 @@
             Não possui uma conta? <a href="/cadastro">Clique aqui para cadastrar-se</a>
         </p>
 
-        @if (ViewBag.ErrorMessage != null) { <div class="alert alert-danger"> @ViewBag.ErrorMessage </div> }
+        
+         @if (ViewBag.resultado == false) { <div class="alert alert-danger"> @ViewBag.ErrorMessage2 </div> }
+         
+
+        
     </form>
 </div>
 </body>

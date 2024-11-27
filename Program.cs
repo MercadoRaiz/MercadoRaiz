@@ -34,6 +34,13 @@ builder.Services.AddAuthorization(options => {
 options.AddPolicy("Cliente", policy => policy.RequireRole("Cliente")); 
 options.AddPolicy("Produtor", policy => policy.RequireRole("Produtor")); }); 
 
+builder.Services.AddAuthorization(options => { 
+    
+    options.AddPolicy("ProdutorOuCliente", policy => policy.RequireAssertion(
+        context => context.User.HasClaim(
+        c => (c.Type == "TipoUsuario" && c.Value == "Produtor") || 
+        (c.Type == "TipoUsuario" && c.Value == "Cliente")))); });
+
 builder.Services.AddSession(options => { 
     options.IdleTimeout = TimeSpan.FromHours(1); 
     options.Cookie.HttpOnly = true; 

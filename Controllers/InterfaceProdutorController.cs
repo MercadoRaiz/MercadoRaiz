@@ -129,6 +129,18 @@ public class InterfaceProdutorController : Controller
     }
 
 
+     public IActionResult RelatorioComprasProdutorPage() {
+        var cpfCliente = GetCPFCliente(); 
+        List<PedidoModel> pedidos = _pedidoRepositorio.BuscarPedidosPorCliente(cpfCliente); 
+        return View(pedidos); }
+
+
+         private string GetCPFCliente()
+        {
+            var cpfCliente = User.FindFirst(ClaimTypes.Name)?.Value;
+            return cpfCliente;
+        }
+
   
 
 
