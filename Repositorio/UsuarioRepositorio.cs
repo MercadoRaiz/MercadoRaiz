@@ -28,11 +28,11 @@ namespace MercadoRaiz.Repositorio
         {
             var usuario = _bancoContext.Usuario
                         .Where(u => u.CPF == cpf)
-                        .Select(u => new { u.CPF, u.Senha }) 
+                        .Select(u => new { u.CPF, u.Senha })
                         .FirstOrDefault();
-            if (usuario != null) 
+            if (usuario != null)
             {
-             return usuario.CPF == cpf && usuario.Senha == senha;
+                return usuario.CPF == cpf && usuario.Senha == senha;
             } // Retornar falso se o usuário não for encontrado return false;
 
             return false;
@@ -42,24 +42,38 @@ namespace MercadoRaiz.Repositorio
         {
             var usuario = _bancoContext.Usuario
                         .Where(u => u.CPF == cpf)
-                        .Select(u => new { u.TipoUsuario})
+                        .Select(u => new { u.TipoUsuario })
                         .FirstOrDefault();
 
 
             return usuario.TipoUsuario.ToString();
         }
 
-       public bool verificarDuplicidadeCPF(string cpf)
-{
-    // Usando LINQ para verificar se o CPF existe no banco de dados
-    bool existe = _bancoContext.Usuario.Any(u => u.CPF == cpf);
-    return existe;
-}
+        public bool verificarDuplicidadeCPF(string cpf)
+        {
+            // Usando LINQ para verificar se o CPF existe no banco de dados
+            bool existe = _bancoContext.Usuario.Any(u => u.CPF == cpf);
+            return existe;
+        }
 
+        public UsuarioModel BuscarPorCPF(string cpf)
+        {
 
-   
+            return _bancoContext.Usuario.FirstOrDefault(u => u.CPF == cpf);
+        }
+        public void AtualizarSenha(string cpf, string novaSenha)
+        {
+            var usuario = BuscarPorCPF(cpf);
+            if (usuario != null)
+            {
+                usuario.Senha = novaSenha;
+                _bancoContext.Update(usuario);
+                _bancoContext.SaveChanges();
+            }
+
+        }
+
     }
-
 }
 
 

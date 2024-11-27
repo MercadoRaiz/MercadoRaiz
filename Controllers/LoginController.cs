@@ -97,9 +97,92 @@ try {
     return View("Index");
 
 }
-    
+
+  [HttpGet]
+    public IActionResult EsqueciSenha()
+    {
+        return View();
+    }
+
+   [HttpPost]
+public IActionResult EsqueciSenha(string cpf, string novaSenha, string confirmarSenha)
+{
+    cpf = new string(cpf.Where(char.IsDigit).ToArray());
+
+    if (novaSenha != confirmarSenha)
+    {
+        ViewBag.ErrorMessage = "As senhas não coincidem.";
+        return View();
+    }
+
+    var usuario = _usuarioRepositorio.BuscarPorCPF(cpf);
+    if (usuario == null)
+    {
+        ViewBag.ErrorMessage = "CPF não cadastrado.";
+        return View();
+    }
+
+    _usuarioRepositorio.AtualizarSenha(cpf, novaSenha);
+    ViewBag.Sucesso = "Senha alterada com sucesso.";
+    return RedirectToAction("Index");
 }
 
 
 
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
