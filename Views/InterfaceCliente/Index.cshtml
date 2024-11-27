@@ -10,6 +10,7 @@
     <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/css/Interface Cliente.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     
@@ -31,10 +32,10 @@
         <!-- Container dos botões -->
         <div class="containerPrincipalbotoes button-grid">
             <a asp-controller="MuralVendas" asp-action="Index" class="btn btn-card m-3 p-4 text-center">
-                Mural de Vendas
+               <i class="fa-solid fa-shop"></i> Mural de Vendas
             </a>
             <a asp-controller="InterfaceCliente" asp-action="RelatorioComprasPage" class="btn btn-card m-3 p-4 text-center">
-                Relatório de Compras
+               <i class='fas fa-chart-line'></i> Relatório de Compras
             </a>
         </div>
     </div>

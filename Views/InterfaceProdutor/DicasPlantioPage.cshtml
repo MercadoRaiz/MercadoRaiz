@@ -1,0 +1,92 @@
+@{
+    ViewData["Title"] = "Dicas de Plantio";
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/DicasPlantio.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+<body>
+    <div class="container mt-5 cor">
+        <h1 class="text-center mb-4"><strong>Dicas de Plantio</strong></h2>
+        <div class="form-group">
+            <label for="alimentoSelect"><strong>Escolha um alimento</strong></label>
+            <select id="alimentoSelect" class="" onchange="mostrarDica()">
+                <option value="">Selecione...</option>
+                <option value="Abobrinha">Abobrinha</option>
+                <option value="Acelga">Acelga</option>
+                <option value="Alface">Alface</option>
+                <option value="Amora">Amora</option>
+                <option value="Batata">Batata</option>
+                <option value="Berinjela">Berinjela</option>
+                <option value="Cebolinha">Cebolinha</option>
+                <option value="Cenoura">Cenoura</option>
+                <option value="Coentro">Coentro</option>
+                <option value="Cogumelo">Cogumelo</option>
+                <option value="Couve">Couve</option>
+                <option value="Espinafre">Espinafre</option>
+                <option value="Framboesa">Framboesa</option>
+                <option value="Hortelã">Hortelã</option>
+                <option value="Limão">Limão</option>
+                <option value="Manjericão">Manjericão</option>
+                <option value="Morango">Morango</option>
+                <option value="Nabo">Nabo</option>
+                <option value="Pepino">Pepino</option>
+                <option value="Pimentão">Pimentão</option>
+                <option value="Rabanete">Rabanete</option>
+                <option value="Rúcula">Rúcula</option>
+                <option value="Salsa">Salsa</option>
+                <option value="Shimeji">Shimeji</option>
+                <option value="Shitake">Shitake</option>
+                <option value="Tomate">Tomate</option>
+            </select>
+        </div>
+        <div id="dicaPlantio" class="mt-2 width:30px"></div>
+        <br>
+        <br>
+        <a class="btn btn-secondary w-100" asp-controller="InterfaceProdutor" asp-action="Index" role="button"><i class="fas fa-arrow-left"></i> VOLTAR</a>
+    </div>
+
+    <script>
+        function mostrarDica() {
+            var dicas = {
+                "Abobrinha": "Solo fértil e bem drenado, irrigação constante. Melhor época: primavera e verão.",
+                "Acelga": "Gosta de climas amenos, solo bem drenado e rico em matéria orgânica. Melhor época: outono e inverno.",
+                "Alface": "Prefere clima fresco, irrigação regular. Melhor época: outono e inverno.",
+                "Amora": "Precisa de sol pleno e solo bem drenado. Melhor época: inverno para mudas, primavera para sementes.",
+                "Batata": "Solo leve e profundo, boa irrigação. Melhor época: final do inverno e início da primavera.",
+                "Berinjela": "Sol pleno e rega constante. Melhor época: primavera e verão.",
+                "Cebolinha": "Solo fértil e boa drenagem. Melhor época: durante o ano todo, melhor em climas quentes.",
+                "Cenoura": "Solo arenoso e sol pleno. Melhor época: outono e inverno.",
+                "Coentro": "Prefere clima ameno, solo úmido e bem drenado. Melhor época: outono e inverno.",
+                "Cogumelo": "Ambientes sombreados e úmidos. Melhor época: inverno e outono.",
+                "Couve": "Clima fresco, solo fértil. Melhor época: outono e inverno.",
+                "Espinafre": "Prefere clima fresco, solo fértil e úmido. Melhor época: outono e inverno.",
+                "Framboesa": "Clima temperado e solo rico. Melhor época: inverno para mudas, primavera para sementes.",
+                "Hortelã": "Sol pleno ou meia sombra, solo úmido. Melhor época: primavera e verão.",
+                "Limão": "Sol pleno e boa irrigação. Melhor época: primavera.",
+                "Manjericão": "Solo rico e úmido, sol pleno. Melhor época: primavera e verão.",
+                "Morango": "Clima ameno, solo úmido. Melhor época: outono e inverno.",
+                "Nabo": "Clima ameno, solo leve e bem drenado. Melhor época: outono e inverno.",
+                "Pepino": "Sol pleno e solo bem drenado. Melhor época: primavera e verão.",
+                "Pimentão": "Clima quente, solo fértil e irrigação constante. Melhor época: primavera e verão.",
+                "Rabanete": "Solo arenoso e sol pleno. Melhor época: outono e inverno.",
+                "Rúcula": "Solo fértil e boa irrigação. Melhor época: outono e inverno.",
+                "Salsa": "Clima ameno, solo úmido. Melhor época: outono e inverno.",
+                "Shimeji": "Local úmido e escuro, usando serragem ou substrato. Melhor época: outono e inverno.",
+                "Shitake": "Ambiente sombreado e úmido, troncos ou serragem. Melhor época: outono e inverno.",
+                "Tomate": "Solo bem drenado e clima quente. Melhor época: primavera e verão."
+            };
+            var alimento = document.getElementById("alimentoSelect").value;
+            var dica = dicas[alimento] || "Selecione um alimento para ver a dica.";
+            document.getElementById("dicaPlantio").innerText = dica;
+        }
+    </script>
+</body>
+</html>

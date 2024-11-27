@@ -5,9 +5,10 @@ using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
-using System.IO; using Microsoft.AspNetCore.Mvc.ViewEngines;
- using Microsoft.AspNetCore.Mvc.Rendering;
- using Microsoft.Extensions.DependencyInjection;
+using System.IO;
+using Microsoft.AspNetCore.Mvc.ViewEngines;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.DependencyInjection;
 
 
 namespace MercadoRaiz.Controllers;
@@ -20,25 +21,25 @@ public class InterfaceProdutorController : Controller
 
 
     public InterfaceProdutorController(IProdutoRepositorio produtoRepositorio, IPedidoRepositorio pedidoRepositorio)
-     {
+    {
         _pedidoRepositorio = pedidoRepositorio;
-         _produtoRepositorio = produtoRepositorio;
-        
-     }
+        _produtoRepositorio = produtoRepositorio;
 
-//VISUALIZAÇÃO
+    }
+
+    //VISUALIZAÇÃO
     public IActionResult Index()
     {
         return View();
     }
 
-     public IActionResult CadastrarPage()
+    public IActionResult CadastrarPage()
     {
         return View();
     }
 
 
-     public IActionResult GerenciarProdutosPage(ProdutoModel produto)
+    public IActionResult GerenciarProdutosPage(ProdutoModel produto)
     {
 
         produto.CPF_Produtor = GetCPF(produto);
@@ -49,6 +50,11 @@ public class InterfaceProdutorController : Controller
 
     }
 
+    public ActionResult DicasPlantioPage()
+    {
+        return View();
+
+    }
 
     public IActionResult AtualizarProduto()
     {
@@ -62,20 +68,20 @@ public class InterfaceProdutorController : Controller
     [HttpPost]
     public ActionResult CadastrarProduto(ProdutoModel produto)
     {
-        
+
         produto.CPF_Produtor = GetCPF(produto);
-        
+
         _produtoRepositorio.Adicionar(produto);
         return RedirectToAction("Index");
     }
 
 
     public IActionResult EditarProdutosPage(int id)
-{
-   
-    ProdutoModel produto = _produtoRepositorio.ListarProduto(id);
-    return View(produto);
-}
+    {
+
+        ProdutoModel produto = _produtoRepositorio.ListarProduto(id);
+        return View(produto);
+    }
 
 
     [HttpPost]
@@ -88,61 +94,64 @@ public class InterfaceProdutorController : Controller
     }
 
 
-  
-    // public IActionResult RemoverProduto(int id)
-    // {
-    //   ProdutoModel produto = _produtoRepositorio.ListarProduto(id);   
-    //     return View(produto);
-    // }
 
-     public IActionResult Remover(int id)
+
+
+    public IActionResult Remover(int id)
     {
-         _produtoRepositorio.Remover(id);
+        _produtoRepositorio.Remover(id);
 
         return RedirectToAction("GerenciarProdutosPage"); //redireciona para index
 
     }
 
 
-    public IActionResult RelatorioVendasPage() {
-        var cpfProdutor = GetCPFProdutor(); 
-        List<PedidoModel> pedidos = _pedidoRepositorio.BuscarPedidosPorProdutor(cpfProdutor); 
-        return View(pedidos); }
-
-
-
-
-    public string GetCPF(ProdutoModel produto){
-
-    var cpfProdutor = User.FindFirst(ClaimTypes.Name)?.Value;
-    produto.CPF_Produtor = cpfProdutor;
-
-    return produto.CPF_Produtor;
-    }
-
-    public string GetCPFProdutor(){
-
-    var cpfProdutor = User.FindFirst(ClaimTypes.Name)?.Value;
-    
-
-    return cpfProdutor;
+    public IActionResult RelatorioVendasPage()
+    {
+        var cpfProdutor = GetCPFProdutor();
+        List<PedidoModel> pedidos = _pedidoRepositorio.BuscarPedidosPorProdutor(cpfProdutor);
+        return View(pedidos);
     }
 
 
-     public IActionResult RelatorioComprasProdutorPage() {
-        var cpfCliente = GetCPFCliente(); 
-        List<PedidoModel> pedidos = _pedidoRepositorio.BuscarPedidosPorCliente(cpfCliente); 
-        return View(pedidos); }
 
 
-         private string GetCPFCliente()
-        {
-            var cpfCliente = User.FindFirst(ClaimTypes.Name)?.Value;
-            return cpfCliente;
-        }
+    public string GetCPF(ProdutoModel produto)
+    {
 
-  
+        var cpfProdutor = User.FindFirst(ClaimTypes.Name)?.Value;
+        produto.CPF_Produtor = cpfProdutor;
 
-
+        return produto.CPF_Produtor;
     }
+
+
+    public IActionResult RelatorioComprasProdutorPage()
+    {
+        var cpfCliente = GetCPFCliente();
+        List<PedidoModel> pedidos = _pedidoRepositorio.BuscarPedidosPorCliente(cpfCliente);
+        return View(pedidos);
+    }
+
+
+
+
+
+    private string GetCPFCliente()
+    {
+        var cpfCliente = User.FindFirst(ClaimTypes.Name)?.Value;
+        return cpfCliente;
+    }
+
+
+    public string GetCPFProdutor()
+    {
+
+        var cpfProdutor = User.FindFirst(ClaimTypes.Name)?.Value;
+
+
+        return cpfProdutor;
+    }
+
+}
 

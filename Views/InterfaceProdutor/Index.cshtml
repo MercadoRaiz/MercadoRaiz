@@ -10,6 +10,7 @@
     <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/css/Interface Produtor.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     
@@ -19,7 +20,6 @@
         
         <img src="~/css/LogoBranca.png" alt="Logo Mercado Raiz" class="imgLogoNavBar">
         
-
     </div>
 
     <!-- Container principal da página -->
@@ -33,20 +33,28 @@
         <!-- Container dos botões -->
         <div class="containerPrincipalbotoes button-grid">
             <a asp-controller="InterfaceProdutor" asp-action="CadastrarPage" class="btn btn-card m-3 p-4 text-center">
-                Cadastrar Produtos
+               <i class="fa-solid fa-plus"></i> Cadastrar Produtos
             </a>
             <a asp-controller="InterfaceProdutor" asp-action="GerenciarProdutosPage" class="btn btn-card m-3 p-4 text-center">
-                Gerenciar Produtos
+                <i class="fa-solid fa-gear"></i> Gerenciar Produtos
             </a>
             <a asp-controller="MuralVendas" asp-action="Index" class="btn btn-card m-3 p-4 text-center">
-                Mural de Vendas
+            <i class="fa-solid fa-shop"></i> Mural de Vendas
             </a>
-            <a asp-controller="InterfaceProdutor" asp-action="RelatorioVendasPage" class="btn btn-card m-3 p-4 text-center">
-                Relatório de Vendas
+
+            <a asp-controller="InterfaceProdutor" asp-action="DicasPlantioPage" class="btn btn-card m-3 p-4 text-center">
+              <i class="fa-regular fa-lightbulb"></i> Dicas de Plantio
             </a>
-            <a asp-controller="InterfaceProdutor" asp-action="RelatorioComprasProdutorPage" class="btn btn-card m-3 p-4 text-center">
-                Relatório de Compras
+
+            <a asp-controller="InterfaceProdutor" asp-action="RelatorioVendasPage" class="btn btn-card m-3 p-5 text-center">
+              <i class='fas fa-chart-line'></i> Relatório de Vendas
             </a>
+            
+            <a asp-controller="InterfaceProdutor" asp-action="RelatorioComprasProdutorPage" class="btn btn-card m-3 p-5 text-center">
+             <i class='fas fa-cart-arrow-down'></i> Relatório de Compras
+            </a>
+          
+
         </div>
     </div>
 
