@@ -56,7 +56,7 @@
         <p class="text-center mt-3">
             Não possui uma conta? <a href="/cadastro">Clique aqui para cadastrar-se</a>
         </p>
-
+        <p class="text-center mt-3"> Esqueceu sua senha? <a asp-controller="Login" asp-action="EsqueciSenha">Clique aqui para redefinir</a> </p>
         
          @if (ViewBag.resultado == false) { <div class="alert alert-danger"> @ViewBag.ErrorMessage2 </div> }
          
